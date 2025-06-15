@@ -1,0 +1,354 @@
+
+"use client";
+
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {Menu, X, Linkedin, Twitter} from "lucide-react";
+import { usePathname } from "next/navigation";
+
+type NavItem = {
+  name: string;
+  submenu?: string[];
+};
+
+const navItems: NavItem[] = [
+  { name: "Home" },
+  { name: "Docs" },
+  { name: "Components" },
+  { name: "About" },
+  { name: "Colors" }, // This array is correct
+];
+
+export const SquigglyUnderline = () => {
+  const pathname = usePathname();
+  const [selectedLink, setSelectedLink] = useState("Home");
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setSelectedLink("Home");
+    } else if (pathname.startsWith("/docs")) {
+      setSelectedLink("Docs");
+    } else if (pathname.startsWith("/component")) {
+      setSelectedLink("Components");
+    } else if (pathname.startsWith("/about")) {
+      setSelectedLink("About");
+    } else if (pathname.startsWith("/colors")) {
+      setSelectedLink("Colors");
+    }
+  }, [pathname]);
+
+  return (
+    // Added fixed, top-0, left-0, w-full, and z-50
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-gray-200 bg-white px-6 py-4 font-mono font-bold" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+      <div className="mx-auto flex max-w-7xl items-center justify-between">
+        {/* Left: Logo */}
+        <div className="flex items-center space-x-3 text-xl">
+          <div className="w-8 logo h-7 rounded-full" />
+          <Link href="/" onClick={() => setSelectedLink("Home")} className="w-auto h-auto cursor-pointer">
+            <div className="w-30 h-8 text-svg mt-1"></div>
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger */}
+        <button
+          className="lg:hidden"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        <nav className="hidden lg:flex bg-transparent items-center gap-8">
+          {/* Home - Updated Link usage */}
+          <Link
+            href="/"
+            onClick={() => setSelectedLink("Home")}
+            className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
+              selectedLink === "Home" ? "text-black" : "text-gray-500"
+            }`}
+          >
+            Home
+            {selectedLink === "Home" && (
+              <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
+                <motion.svg
+                  width="37"
+                  height="8"
+                  viewBox="0 0 37 8"
+                  fill="none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  <motion.path
+                    d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
+                    stroke="#3B82F6"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    initial={{ strokeDasharray: 84.2, strokeDashoffset: 84.2 }}
+                    animate={{ strokeDashoffset: 0 }}
+                    transition={{ duration: 1 }}
+                  />
+                </motion.svg>
+              </motion.div>
+            )}
+          </Link>
+
+          {/* Docs - Updated Link usage */}
+          <Link
+            href="/docs"
+            onClick={() => setSelectedLink("Docs")}
+            className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
+              selectedLink === "Docs" ? "text-black" : "text-gray-500"
+            }`}
+          >
+            Docs
+            {selectedLink === "Docs" && (
+              <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
+                <motion.svg
+                  width="37"
+                  height="8"
+                  viewBox="0 0 37 8"
+                  fill="none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  <motion.path
+                    d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
+                    stroke="#3B82F6"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    initial={{ strokeDasharray: 84.2, strokeDashoffset: 84.2 }}
+                    animate={{ strokeDashoffset: 0 }}
+                    transition={{ duration: 1 }}
+                  />
+                </motion.svg>
+              </motion.div>
+            )}
+          </Link>
+
+          {/* Components */}
+          <Link
+            href="/component"
+            onClick={() => setSelectedLink("Components")}
+            className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
+              selectedLink === "Components" ? "text-black" : "text-gray-500"
+            }`}
+          >
+            Components
+            {selectedLink === "Components" && (
+              <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
+                <motion.svg
+                  width="37"
+                  height="8"
+                  viewBox="0 0 37 8"
+                  fill="none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  <motion.path
+                    d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
+                    stroke="#3B82F6"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    initial={{ strokeDasharray: 84.2, strokeDashoffset: 84.2 }}
+                    animate={{ strokeDashoffset: 0 }}
+                    transition={{ duration: 1 }}
+                  />
+                </motion.svg>
+              </motion.div>
+            )}
+          </Link>
+
+          {/* About */}
+          <Link // Changed from button to Link for consistency and proper navigation
+            href="/about"
+            onClick={() => setSelectedLink("About")}
+            className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
+              selectedLink === "About" ? "text-black" : "text-gray-500"
+            }`}
+          >
+            About
+            {selectedLink === "About" && (
+              <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
+                <motion.svg
+                  width="37"
+                  height="8"
+                  viewBox="0 0 37 8"
+                  fill="none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  <motion.path
+                    d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
+                    stroke="#3B82F6"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    initial={{ strokeDasharray: 84.2, strokeDashoffset: 84.2 }}
+                    animate={{ strokeDashoffset: 0 }}
+                    transition={{ duration: 1 }}
+                  />
+                </motion.svg>
+              </motion.div>
+            )}
+          </Link>
+
+          {/* Colors (formerly "Contact" and incorrectly labeled "Components") */}
+          <Link
+            href="/colors"
+            onClick={() => setSelectedLink("Colors")}
+            className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
+              selectedLink === "Colors" ? "text-black" : "text-gray-500"
+            }`}
+          >
+            Colors {/* Changed text from "Components" to "Colors" */}
+            {selectedLink === "Colors" && (
+              <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
+                <motion.svg
+                  width="37"
+                  height="8"
+                  viewBox="0 0 37 8"
+                  fill="none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  <motion.path
+                    d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
+                    stroke="#3B82F6"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    initial={{
+                      strokeDasharray: 84.2,
+                      strokeDashoffset: 84.2,
+                    }}
+                    animate={{
+                      strokeDashoffset: 0,
+                    }}
+                    transition={{ duration: 1 }}
+                  />
+                </motion.svg>
+              </motion.div>
+            )}
+          </Link>
+        </nav>
+
+        {/* Right: CTA & Socials (Desktop only) */}
+        <div className="hidden lg:flex items-center space-x-8">
+          <a
+            href="https://github.com/your-repo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-800 shadow-sm transition hover:bg-gray-100"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              className="w-4 h-4 text-gray-700"
+            >
+              <path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.7.4.08.55-.18.55-.39 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.91-3.64-4.04 0-.89.31-1.61.82-2.18-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.47 7.47 0 0 1 2-.27 7.45 7.45 0 0 1 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.57.82 1.29.82 2.18 0 3.14-1.87 3.84-3.65 4.04.29.25.54.74.54 1.49 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0z" />
+            </svg>
+            Star on GitHub
+          </a>
+
+          {/* Social Icons */}
+          <div className="flex items-center space-x-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-5 h-5 text-gray-600 hover:text-blue-600 transition" />
+            </a>
+              <a href="https://github.com/Anurag-singh-RBU" target="_blank" rel="noopener noreferrer">
+                <div id = "githubicon" className="w-6 h-6 text-gray-600 hover:text-black transition"/>
+              </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <Twitter className="w-5 h-5 text-gray-500 hover:text-sky-500 transition" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <AnimatePresence>
+  {mobileOpen && (
+    <div
+      className="absolute top-full left-0 w-full z-50 bg-white border-t border-gray-200 shadow-lg lg:hidden space-y-4 py-4 flex flex-col items-center"
+    >
+      {navItems.map((item) => {
+        const isSelected = item.name === selectedLink;
+        let itemHref = "/";
+        if (item.name === "Docs") itemHref = "/docs";
+        if (item.name === "Components") itemHref = "/component";
+        if (item.name === "About") itemHref = "/about";
+        if (item.name === "Colors") itemHref = "/colors"; // Corrected this line
+
+        return (
+          <Link
+            key={item.name}
+            href={itemHref}
+            onClick={() => {
+              setSelectedLink(item.name);
+              setMobileOpen(false);
+            }}
+            className="w-full px-2 py-2 text-sm font-bold text-gray-800 relative text-center block"
+          >
+            {item.name}
+            {isSelected && (
+              <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1">
+                <motion.svg
+                  width="37"
+                  height="8"
+                  viewBox="0 0 37 8"
+                  fill="none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  <motion.path
+                    d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
+                    stroke="#3B82F6"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    initial={{
+                      strokeDasharray: 84.2,
+                      strokeDashoffset: 84.2,
+                    }}
+                    animate={{
+                      strokeDashoffset: 0,
+                    }}
+                    transition={{ duration: 1 }}
+                  />
+                </motion.svg>
+              </motion.div>
+            )}
+          </Link>
+        );
+      })}
+
+      {/* Add social icons here for mobile */}
+      <div className="flex space-x-6 mt-4">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <Linkedin className="w-6 h-6 text-gray-600 hover:text-blue-600 transition"/>
+        </a>
+        <a href="https://github.com/Anurag-singh-RBU" target="_blank" rel="noopener noreferrer">
+          <div id = "githubicon" className="w-6 h-6 text-gray-600 hover:text-black transition"/>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <Twitter className="w-6 h-6 text-gray-500 hover:text-sky-500 transition"/>
+        </a>
+      </div>
+    </div>
+  )}
+</AnimatePresence>
+
+    </header>
+  );
+};
