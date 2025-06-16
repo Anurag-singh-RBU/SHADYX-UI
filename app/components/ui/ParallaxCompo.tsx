@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 'use client';
 import React, { useState, useRef } from 'react';
 import { Monitor, FileCode } from 'lucide-react';
@@ -13,17 +13,10 @@ const Spotlight: React.FC = () => {
   // const [copied1, setCopied1] = useState(false);
   // const [copied2, setCopied2] = useState(false);
 
-  const handleCopy = (text: string, setCopied: (val: boolean) => void) => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  };
-
   // const installCmd = `npm install react-just-parallax`;
 
-  const utilCode = `
-  <ParallaxHero parallaxRef = {parallaxRef}/>`;
+  // const utilCode = `
+  // <ParallaxHero parallaxRef = {parallaxRef}/>`;
   const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview');
   const parallaxRef = useRef<HTMLDivElement>(null!);
 
