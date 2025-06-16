@@ -311,7 +311,8 @@ body {
 }
 
 #para,
-#paraTwo {
+#paraTwo,
+#paraThree {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -327,6 +328,11 @@ body {
 
 #para {
   background-image: url("parallax.png");
+}
+
+#paraThree {
+  background-color: black;
+  background-image: url("svgmasking.png");
 }
 
 @media (max-width: 640px) {

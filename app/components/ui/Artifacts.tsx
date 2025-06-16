@@ -25,6 +25,16 @@ const Artifacts = () => {
           Every glow and movement speaks your life
         </h4>
       </Link>
+
+       <Link href="/svgcomponent" className="flex flex-col cursor-pointer sm:mx-0">
+        <div className="bg-black rounded-2xl overflow-hidden py-3">
+          <div id="paraThree" />
+        </div>
+        <h1 className="text-center text-xl mt-6 font-bold">Svg Masking</h1>
+        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium">
+          Shape vision with SVG masks
+        </h4>
+      </Link>
     </div>
   );
 };
