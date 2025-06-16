@@ -19,7 +19,7 @@ export function Introduction() {
         }}
       />
       🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
-      <AnimatedGradientText className="text-sm font-medium">
+      <AnimatedGradientText className="text-sm mono-text sm:font-medium font-bold">
         Introducing Shadyx UI
       </AnimatedGradientText>
       <ChevronRight
