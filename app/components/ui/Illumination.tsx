@@ -2,25 +2,27 @@
 import React, {useState} from 'react';
 import { Monitor, FileCode } from 'lucide-react';
 import { CodeBlock } from './code-block';
-import { Copy, Check } from 'lucide-react';
+// import { Copy, Check } from 'lucide-react';
 import IlluminationComp from './IlluminationComp';
+import {ScriptCopyBtn} from './ScriptCopyBtn';
+import { ScriptImport } from './ScriptImport';
 
 const Spotlight: React.FC = () => {
 
-  const [copied1, setCopied1] = useState(false);
-  const [copied2, setCopied2] = useState(false);
+  // const [copied1, setCopied1] = useState(false);
+  // const [copied2, setCopied2] = useState(false);
 
-  const handleCopy = (text: string, setCopied: (val: boolean) => void) => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  };
+  // // const handleCopy = (text: string, setCopied: (val: boolean) => void) => {
+  //   navigator.clipboard.writeText(text).then(() => {
+  //     setCopied(true);
+  //     setTimeout(() => setCopied(false), 2000);
+  //   });
+  // // };
 
-  const installCmd = `npm install lucide-react`;
+  // const installCmd = `npm install lucide-react`;
 
-  const utilCode = `  <IlluminationComp/>
-  `;
+  // const utilCode = `  <IlluminationComp/>
+  // `;
   const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview');
   const codeString = `import React from 'react';
 import { Lamp } from 'lucide-react';
@@ -123,8 +125,8 @@ import { Lamp } from 'lucide-react';
         )}
       </div>
 
- <div className="sm:px-32 sm:pt-10 pb-10 font-JB">
-      <h2 className="text-3xl font-bold mb-6 sm:ml-1 mt-25">Installation</h2>
+    <div className="sm:px-32 sm:pt-10 pb-10 font-JB">
+      <h2 className="text-3xl font-bold mb-6 sm:ml-1 sm:mt-25 mt-18">Installation</h2>
 
       {/* Tabs */}
       <div className="flex items-center border-b border-gray-300 mb-6 text-sm">
@@ -132,31 +134,19 @@ import { Lamp } from 'lucide-react';
       </div>
 
       {/* Install Dependencies */}
-      <div className="mb-10 relative">
-        <div className="bg-[#1e1e2f] text-green-400 sm:text-sm text-[13px] rounded-lg p-4 font-mono relative">
-          {installCmd}
-          <button
-            onClick={() => handleCopy(installCmd, setCopied1)}
-            className="absolute top-2 right-2 text-white hover:text-green-400"
-          >
-            {copied1 ? <Check size={18} /> : <Copy size={18} />}
-          </button>
-        </div>
-      </div>
-
+      <ScriptCopyBtn
+        commandMap={{
+          npm: "npm install lucide-react",
+          yarn: "yarn add lucide-react",
+          pnpm: "pnpm add lucide-react",
+          bun: "bun add lucide-react",
+        }}
+      />
       {/* Add util file */}
-      <div className="relative">
+      <div className="relative -mb-15">
         <h3 className="text-base sm:font-semibold font-bold mb-2 ml-2">Update App file</h3>
         <p className="text-sm text-muted-foreground mb-2 ml-2">App.jsx</p>
-         <div className="bg-[#1e1e2f] text-green-400 sm:text-sm text-[13px] rounded-lg p-4 font-mono relative">
-          {utilCode}
-          <button
-            onClick={() => handleCopy(utilCode, setCopied2)}
-            className="absolute top-2 right-2 text-white hover:text-green-400"
-          >
-            {copied2 ? <Check size={18} /> : <Copy size={18} />}
-          </button>
-        </div>
+         <ScriptImport command="<IlluminationComp/>" />
       </div>
     </div>
     </div>

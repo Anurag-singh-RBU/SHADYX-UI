@@ -1,14 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 import React, { useState, useRef } from 'react';
 import { Monitor, FileCode } from 'lucide-react';
 import { ParallaxHero } from './ParallaxHero';
 import { CodeBlock } from './code-block';
-import { Copy, Check } from 'lucide-react';
+// import { Copy, Check } from 'lucide-react';
+import { ScriptCopyBtn } from './ScriptCopyBtn';
+import { ScriptImport } from './ScriptImport';
 
 const Spotlight: React.FC = () => {
 
-  const [copied1, setCopied1] = useState(false);
-  const [copied2, setCopied2] = useState(false);
+  // const [copied1, setCopied1] = useState(false);
+  // const [copied2, setCopied2] = useState(false);
 
   const handleCopy = (text: string, setCopied: (val: boolean) => void) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -17,7 +20,7 @@ const Spotlight: React.FC = () => {
     });
   };
 
-  const installCmd = `npm install react-just-parallax`;
+  // const installCmd = `npm install react-just-parallax`;
 
   const utilCode = `
   <ParallaxHero parallaxRef = {parallaxRef}/>`;
@@ -175,31 +178,22 @@ export const ParallaxHero: React.FC<ParallaxHeroProps> = ({ parallaxRef }) => {
 
       {/* Install Dependencies */}
       <div className="mb-10 relative">
-        <div className="bg-[#1e1e2f] text-green-400 sm:text-sm text-[13px] rounded-lg p-4 font-mono relative">
-          {installCmd}
-          <button
-            onClick={() => handleCopy(installCmd, setCopied1)}
-            className="absolute top-2 right-2 text-white hover:text-green-400"
-          >
-            {copied1 ? <Check size={18} /> : <Copy size={18} />}
-          </button>
-        </div>
+        <ScriptCopyBtn
+                commandMap={{
+                  npm: "npm install react-just-parallax",
+                  yarn: "yarn add react-just-parallax",
+                  pnpm: "pnpm add react-just-parallax",
+                  bun: "bun add react-just-parallax",
+                }}
+              />
       </div>
 
       {/* Add util file */}
-      <div className="relative">
-        <h3 className="text-base sm:font-semibold font-bold mb-2 ml-2">Update App file</h3>
-        <p className="text-sm text-muted-foreground mb-2 ml-2">App.jsx</p>
-        <div className="bg-[#1e1e2f] text-sm text-white rounded-lg pt-4 pb-8 sm:pt-0 sm:pb-5 font-mono relative">
-          <pre className="whitespace-no-wrap text-green-400 font-mono sm:text-sm text-[13px] overflow-x-auto">{utilCode}</pre>
-          <button
-            onClick={() => handleCopy(utilCode, setCopied2)}
-            className="absolute top-2 right-2 text-white hover:text-green-400"
-          >
-            {copied2 ? <Check size={18} /> : <Copy size={18} />}
-          </button>
-        </div>
-      </div>
+            <div className="relative -mb-15">
+              <h3 className="text-base sm:font-semibold font-bold mb-2 ml-2">Update App file</h3>
+              <p className="text-sm text-muted-foreground mb-2 ml-2">App.jsx</p>
+               <ScriptImport command="<ParallaxHero parallaxRef = {parallaxRef}/>" />
+            </div>
     </div>
     </div>
   );

@@ -376,3 +376,12 @@ body {
   background-repeat: no-repeat;
 
 }
+
+/* override shiki styles globally */
+.shiki code,
+.shiki .line,
+.shiki .token {
+  color: rgb(103,159,140) !important; /* greenish */
+  background-color: transparent !important;
+}
+

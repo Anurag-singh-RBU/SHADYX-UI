@@ -2,6 +2,7 @@
 // import BehindTerminal from "./BehindTerminal";
 // import { SquigglyUnderline } from "./SquigglyUnderline";
 import Working from "./Working";
+import { AnimatedBeamDemo } from "./components/ui/AnimatedBeamDemo";
 import { ColorGroup } from "./components/ui/ColorGroup";
 import { Introduction } from "./components/ui/Introduction";
 // import Footerdemo from "./components/ui/Footerdemo";
@@ -114,6 +115,7 @@ export default function Home() {
 
         <Working/>
         <ReadDocs/>
+        {/* <AnimatedBeamDemo/> */}
         {/* <BehindTerminal></BehindTerminal> */}
         {/* <CPnAll></CPnAll> */}
         {/* <Footerdemo></Footerdemo> */}
