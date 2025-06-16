@@ -3,6 +3,7 @@
 // import { SquigglyUnderline } from "./SquigglyUnderline";
 import Working from "./Working";
 import { ColorGroup } from "./components/ui/ColorGroup";
+import { Introduction } from "./components/ui/Introduction";
 // import Footerdemo from "./components/ui/Footerdemo";
 // import CPnAll from "./components/ui/CPnAll";
 import ReadDocs from "./components/ui/ReadDocs";
@@ -15,12 +16,16 @@ export default function Home() {
 
   return (
     <>
-      {/* <SquigglyUnderline /> */}
+
       <div className="relative overflow-hidden sm:min-h-full min-h-full px-4">
         <Spotlight/>
+        
+        <div className="sm:mt-40 mt-35 sm:-mb-5 -mb-8">
+          <Introduction></Introduction>
+        </div>
 
         <main className="relative z-10 flex flex-col justify-center items-center text-center px-4">
-          <div className="sm:mt-50 mt-35">
+          <div className="sm:mt-15 mt-15">
             <div
               id="spacing"
               className="text-3xl sm:text-7xl text-nowrap font-JB font-extrabold mb-3 sm:mb-5 text-gray-800 whitespace-nowrap sm:whitespace-nowrap text-center px-4">

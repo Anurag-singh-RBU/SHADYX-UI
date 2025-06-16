@@ -13,7 +13,6 @@ code, pre, .mono-text {
   font-family: 'Geist Mono', monospace;
 }
 
-
 .font-GS {
   font-family: 'Geist Sans', sans-serif;
 }
@@ -74,6 +73,14 @@ code, pre, .mono-text {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-gradient: gradient 8s linear infinite;
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;
+
+    }
+
+  }
 }
 
 @import "tailwindcss";
@@ -332,8 +339,6 @@ body {
   }
 }
 
-
-
 @keyframes border-glow {
   0% {
     background-position: 0% 50%;
@@ -369,7 +374,5 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
 }
-
-
