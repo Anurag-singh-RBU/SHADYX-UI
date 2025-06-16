@@ -111,14 +111,14 @@ export const Terminal = ({ children, className }: TerminalProps) => {
         className
       )}
     >
-      <div className="flex flex-col gap-y-2 border-b border-border p-4">
+      <div className="flex flex-col gap-y-2 border-b border-border sm:p-4 p-5">
         <div className="flex flex-row gap-x-2">
           <div className="h-2 w-2 rounded-full bg-red-500" />
           <div className="h-2 w-2 rounded-full bg-yellow-500" />
           <div className="h-2 w-2 rounded-full bg-green-500" />
         </div>
       </div>
-      <pre className="p-4">
+      <pre className="sm:p-4 p-5">
         <code className="grid gap-y-1 overflow-auto">{children}</code>
       </pre>
     </div>
