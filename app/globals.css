@@ -337,7 +337,8 @@ body {
 
 @media (max-width: 640px) {
   #para,
-  #paraTwo {
+  #paraTwo,
+  #paraThree {
     width: 100%;
     max-width: 350px;
     height: 200px;
