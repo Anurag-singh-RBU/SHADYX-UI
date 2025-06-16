@@ -39,7 +39,7 @@ const SvgMaskHero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full font-JB bg-white overflow-hidden flex items-center justify-center">
+    <div className="relative w-full h-full bg-white overflow-hidden flex items-center justify-center">
       <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <mask id="liquidMask">

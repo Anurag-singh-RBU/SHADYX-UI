@@ -7,6 +7,7 @@ import { Introduction } from "./components/ui/Introduction";
 // import Footerdemo from "./components/ui/Footerdemo";
 // import CPnAll from "./components/ui/CPnAll";
 import ReadDocs from "./components/ui/ReadDocs";
+import { TerminalDemo } from "./components/ui/TerminalDemo";
 import { Cover } from "./components/ui/cover";
 import { Spotlight } from "./components/ui/spotlight-new";
 import { getColors } from "@/app/lib/colors"
@@ -114,6 +115,11 @@ export default function Home() {
 
         <Working/>
         <ReadDocs/>
+        <div className="h-auto flex sm:justify-end justify-center sm:mt-3 sm:mb-15 my-5 sm:px-23">
+          <div>
+            <TerminalDemo/>
+          </div>
+        </div>
         {/* <AnimatedBeamDemo/> */}
         {/* <BehindTerminal></BehindTerminal> */}
         {/* <CPnAll></CPnAll> */}
