@@ -41,7 +41,6 @@ import { Lamp } from 'lucide-react';
   };
   
   export default IlluminationComp;
-  
 `;
 
   return (
@@ -96,7 +95,7 @@ import { Lamp } from 'lucide-react';
       {/* Content Switcher */}
       <div className="sm:mt-10 rounded-md mt-5 min-h-[400px] -mb-25 sm:mb-0 relative">
         {activeTab === 'preview' ? (
-          <div className="relative rounded-md overflow-hidden sm:h-auto h-auto bg-gradient-to-b from-black via-gray-900 to-black">
+          <div className="relative rounded-md mb-40 sm:mb-0 overflow-hidden sm:h-auto h-auto bg-gradient-to-b from-black via-gray-900 to-black">
             <PaintBoard></PaintBoard>
           </div>
         ) : (
@@ -111,7 +110,7 @@ import { Lamp } from 'lucide-react';
       </div>
 
     <div className="sm:px-32 sm:pt-10 pb-10 font-JB">
-      <h2 className="text-3xl font-bold mb-6 sm:ml-1 sm:mt-25 mt-40">Installation</h2>
+      <h2 className="text-3xl font-bold mb-6 sm:ml-1 sm:mt-25 mt-15">Installation</h2>
 
       {/* Tabs */}
       <div className="flex items-center border-b border-gray-300 mb-6 text-sm">

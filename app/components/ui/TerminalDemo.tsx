@@ -7,14 +7,14 @@ import {
 export function TerminalDemo() {
   return (
     <Terminal>
-      <TypingAnimation>&gt; Its Anurag Here - Author of ShadYx UI</TypingAnimation>
+      <TypingAnimation>&gt; Its Anurag Here - ShadYx UI</TypingAnimation>
 
       <AnimatedSpan delay={2000} className="text-green-500">
-        <span className="text-sm sm:text-md">✔ SEO Optimized</span>
+        <span className="text-sm sm:text-md">✔ SEO Optimized.</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={2500} className="text-green-500">
-        <span className="text-sm sm:text-md">✔ Verifying framework. Found Next.js.</span>
+        <span className="text-sm sm:text-md">✔ Pixel Perfect.</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={3000} className="text-green-500">

@@ -107,18 +107,18 @@ export const Terminal = ({ children, className }: TerminalProps) => {
   return (
     <div
       className={cn(
-        "z-0 h-full max-h-[400px] sm:w-[420px] rounded-xl border-1 border-gray-300 bg-background",
+        "z-0 h-full max-h-[400px] sm:w-[380px] w-[310px] rounded-xl border-1 border-gray-300 bg-background",
         className
       )}
     >
-      <div className="flex flex-col gap-y-2 border-b-1 border-gray-300 sm:p-6 p-6">
+      <div className="flex flex-col gap-y-2 border-b-1 border-gray-300 sm:p-5 px-4 py-4">
         <div className="flex flex-row gap-x-2">
           <div className="h-2 w-2 rounded-full bg-red-500" />
           <div className="h-2 w-2 rounded-full bg-yellow-500" />
           <div className="h-2 w-2 rounded-full bg-green-500" />
         </div>
       </div>
-      <pre className="sm:p-6 p-6">
+      <pre className="sm:p-5 px-4 py-4">
         <code className="grid gap-y-1 overflow-auto">{children}</code>
       </pre>
     </div>

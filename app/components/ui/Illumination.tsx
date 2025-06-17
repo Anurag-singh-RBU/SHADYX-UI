@@ -56,7 +56,6 @@ import { Lamp } from 'lucide-react';
   };
   
   export default IlluminationComp;
-  
 `;
 
   return (
