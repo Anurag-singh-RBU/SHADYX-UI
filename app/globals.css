@@ -312,7 +312,8 @@ body {
 
 #para,
 #paraTwo,
-#paraThree {
+#paraThree,
+#paraFour{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -335,10 +336,16 @@ body {
   background-image: url("svgmasking.png");
 }
 
+#paraFour {
+  background-color: rgb(82,82,82);
+  background-image: url("paintboard.png");
+}
+
 @media (max-width: 640px) {
   #para,
   #paraTwo,
-  #paraThree {
+  #paraThree,
+  #paraFour {
     width: 100%;
     max-width: 350px;
     height: 200px;

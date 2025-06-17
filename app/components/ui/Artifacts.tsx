@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Artifacts = () => {
   return (
-    <div className="sm:flex gap-10 w-full items-center mono-text px-4 sm:px-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full px-4 sm:px-8 mono-text">
       {/* Card 1 */}
-      <Link href="/parallaxcomponent" className="flex flex-col cursor-pointer sm:mx-0 mb-10 sm:mb-0">
+      <Link href="/parallaxcomponent" className="flex flex-col cursor-pointer">
         <div className="bg-black rounded-2xl overflow-hidden py-3">
           <div id="para" />
         </div>
@@ -16,7 +16,7 @@ const Artifacts = () => {
       </Link>
 
       {/* Card 2 */}
-      <Link href="/illuminationeffect" className="flex flex-col cursor-pointer sm:mx-0 mb-10 sm:mb-0">
+      <Link href="/illuminationeffect" className="flex flex-col cursor-pointer">
         <div className="bg-black rounded-2xl overflow-hidden py-3">
           <div id="paraTwo" />
         </div>
@@ -26,11 +26,23 @@ const Artifacts = () => {
         </h4>
       </Link>
 
-       <Link href="/svgcomponent" className="flex flex-col -mb-13 sm:mb-0 cursor-pointer sm:mx-0">
+      {/* Card 3 */}
+      <Link href="/svgcomponent" className="flex flex-col cursor-pointer">
         <div className="bg-black rounded-2xl overflow-hidden py-3">
           <div id="paraThree" />
         </div>
         <h1 className="text-center text-xl mt-6 font-bold">Svg Masking</h1>
+        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium">
+          Shape vision with beautiful SVG masks
+        </h4>
+      </Link>
+
+      {/* Card 4 */}
+      <Link href="/paintcomponent" className="flex flex-col cursor-pointer">
+        <div className="bg-[rgb(82,82,82)] rounded-2xl overflow-hidden py-3">
+          <div id="paraFour" />
+        </div>
+        <h1 className="text-center text-xl mt-6 font-bold">Paint Board</h1>
         <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium">
           Shape vision with beautiful SVG masks
         </h4>
