@@ -12,7 +12,7 @@ const IlluminationComp = () => {
         <div className="absolute w-96 h-96 bg-gradient-radial from-yellow-400/30 via-yellow-400/10 to-transparent rounded-full animate-glow pointer-events-none z-[-1]"></div>
 
         {/* Main Heading */}
-        <h1 className="sm:text-7xl text-4xl md:text-9xl font-bold relative">
+        <h1 className="lg:text-8xl text-4xl md:text-8xl font-bold relative">
           <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent font-JB animate-pulse">
             ILLUMINATED
           </span>

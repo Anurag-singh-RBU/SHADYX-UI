@@ -77,7 +77,7 @@ export const PaintBoard = () => {
         <div className="bg-white rounded-xl shadow-xl p-4 border border-gray-100">
           <div className="flex flex-col md:flex-row gap-4">
             {/* Toolbar */}
-            <div className="md:w-60 flex-shrink-0">
+            <div className="md:w-60  flex-shrink-0">
               <ToolBar 
                 activeTool={activeTool} 
                 onToolClick={handleToolClick} 
@@ -92,13 +92,15 @@ export const PaintBoard = () => {
 
             {/* Canvas */}
             <div className="flex-1 flex justify-center">
-              <div className="bg-white rounded border border-gray-300 overflow-hidden">
+              <div className="bg-white rounded border border-gray-300 overflow-hidden
+                              md:w-[400px] lg:w-[700px] lg:block">
                 <canvas 
                   ref={canvasRef} 
                   className="block w-[700px] h-[400px] max-w-full" 
                 />
               </div>
             </div>
+
           </div>
         </div>
       </div>

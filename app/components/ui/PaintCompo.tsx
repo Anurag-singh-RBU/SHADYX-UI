@@ -93,7 +93,7 @@ import { Lamp } from 'lucide-react';
       </div>
 
       {/* Content Switcher */}
-      <div className="sm:mt-10 rounded-md mt-5 min-h-[400px] -mb-25 sm:mb-0 relative">
+      <div className="sm:mt-10 rounded-md mt-5 min-h-[400px] md:-ml-10 ml-0 -mb-25 sm:mb-0 relative">
         {activeTab === 'preview' ? (
           <div className="relative rounded-md mb-40 sm:mb-0 overflow-hidden sm:h-auto h-auto bg-gradient-to-b from-black via-gray-900 to-black">
             <PaintBoard></PaintBoard>
