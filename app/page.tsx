@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // import BehindTerminal from "./BehindTerminal";
 // import { SquigglyUnderline } from "./SquigglyUnderline";
@@ -65,11 +66,11 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row items-center justify-center sm:mt-8 mt-5 gap-4 sm:gap-8 flex-wrap">
-            <button className="relative group inline-flex items-center justify-center rounded-full bg-black px-5 py-2 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition-all duration-300">
-              <span className="absolute inset-0 rounded-full bg-[radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.3)_0%,rgba(56,189,248,0)_75%)] opacity-0"></span>
+            <button className="relative group inline-flex w-full sm:w-auto items-center justify-center rounded-md bg-black px-5 py-2 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition-all duration-300">
+              <span className="absolute inset-0 rounded-md bg-[radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.3)_0%,rgba(56,189,248,0)_75%)] opacity-0"></span>
               <span className="relative z-10 flex items-center space-x-2 cursor-pointer">
                 <span className="text-sm">✨</span>
-                <span className="font-bold font-JB">Book a Call</span>
+                <span className="font-bold font-JB"><span className="font-bold font-JB">Explore </span>Components</span>
                 <svg
                   className="ml-1"
                   width="16"
@@ -93,13 +94,13 @@ export default function Home() {
               href="https://github.com/your-repo"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 font-JB text-center font-bold rounded-xl border border-gray-300 bg-white sm:mt-0 px-2 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100"
+              className="flex items-center justify-center w-full sm:w-auto sm:gap-3 gap-4 font-JB text-center font-bold rounded-md border border-gray-300 bg-white sm:mt-0 px-5 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 16 16"
-                className="w-4 h-4 text-gray-700"
+                className="w-4 h-4 -ml-5 sm:ml-0 text-gray-700"
               >
                 <path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.7.4.08.55-.18.55-.39 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.91-3.64-4.04 0-.89.31-1.61.82-2.18-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.47 7.47 0 0 1 2-.27 7.45 7.45 0 0 1 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.57.82 1.29.82 2.18 0 3.14-1.87 3.84-3.65 4.04.29.25.54.74.54 1.49 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0z" />
               </svg>
@@ -108,7 +109,7 @@ export default function Home() {
           </div>
         </main>
 
-        <div className="text-center text-sm text-gray-700 font-JB mt-5">
+        <div className="text-center text-sm text-gray-700 mono-text mt-5">
           Current release&nbsp;
           <span className="font-bold font-JB text-black">v1.0.0</span>
         </div>
@@ -120,10 +121,6 @@ export default function Home() {
             <TerminalDemo/>
           </div>
         </div>
-        {/* <AnimatedBeamDemo/> */}
-        {/* <BehindTerminal></BehindTerminal> */}
-        {/* <CPnAll></CPnAll> */}
-        {/* <Footerdemo></Footerdemo> */}
 
       </div>
     </>

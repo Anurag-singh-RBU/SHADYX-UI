@@ -35,10 +35,10 @@ export function ColorGroup({
     <div
       className="rounded-lg border p-4 sm:mx-23 mono-text font-bold"
       style={{
-        marginLeft: isSurfacePro ? "20px" : undefined, // Surface Pro: align left
+        width: isSurfacePro ? "820px" : "auto",
+        marginLeft: isSurfacePro ? "auto" : undefined,
         marginRight: isSurfacePro ? "auto" : undefined,
         maxWidth: isSurfacePro ? "960px" : undefined,
-        width: isSurfacePro ? "820px" : "auto", // Surface Pro: 820px, others full width
       }}
     >
       <div className="mb-4 flex items-center sm:justify-between justify-around">
