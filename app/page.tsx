@@ -94,18 +94,18 @@ export default function Home() {
               href="https://github.com/your-repo"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-full sm:w-auto sm:gap-3 gap-4 font-JB text-center font-bold rounded-md border border-gray-300 bg-white sm:mt-0 px-5 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100"
+              className="flex items-center justify-center w-full sm:w-auto sm:gap-3 gap-3 font-JB text-center font-bold rounded-md border border-gray-300 bg-white sm:mt-0 px-5 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 16 16"
-                className="w-4 h-4 text-gray-700"
+                className="w-4 h-4 -ml-3 sm:ml-0 text-gray-700"
               >
                 <path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.7.4.08.55-.18.55-.39 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.91-3.64-4.04 0-.89.31-1.61.82-2.18-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.47 7.47 0 0 1 2-.27 7.45 7.45 0 0 1 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.57.82 1.29.82 2.18 0 3.14-1.87 3.84-3.65 4.04.29.25.54.74.54 1.49 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0z" />
               </svg>
-              <span>Star on GitHub</span>
-            </a>
+              <span className="mt-[1px] sm:mt-0">Star on GitHub</span>
+            </a> 
           </div>
         </main>
 
