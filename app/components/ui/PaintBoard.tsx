@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Canvas as FabricCanvas, PencilBrush } from "fabric";
 import { ToolBar } from "./ToolBar";
 import { ColorPicker } from "./ColorPicker";
-import { toast, Toaster } from "sonner";
+import { Toaster } from "sonner";
 
 export const PaintBoard = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -56,7 +56,6 @@ export const PaintBoard = () => {
     fabricCanvas.clear();
     fabricCanvas.backgroundColor = "#ffffff";
     fabricCanvas.renderAll();
-    toast("🗑️ Canvas cleared!");
   };
 
   const handleBrushSizeChange = (size: number) => {
@@ -92,8 +91,7 @@ export const PaintBoard = () => {
 
             {/* Canvas */}
             <div className="flex-1 flex justify-center">
-              <div className="bg-white rounded border border-gray-300 overflow-hidden
-                              md:w-[400px] lg:w-[700px] lg:block">
+              <div className="bg-white rounded border border-gray-300 overflow-hidden md:w-[350px] lg:w-[700px] lg:block">
                 <canvas 
                   ref={canvasRef} 
                   className="block w-[700px] h-[400px] max-w-full" 
