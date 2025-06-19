@@ -141,9 +141,6 @@ export default EarthCanvas;
         {activeTab === 'preview' ? (
           <div className="relative rounded-md sm:h-[500px] h-[300px] bg-gradient-to-b from-black via-gray-900 to-black">
             <EarthCanvas/>
-            <h1 className="text-center text-white sm:text-4xl text-xl font-JB sm:pt-54 pt-29 sm:pl-3 px-3">
-              Give your screen some life with motion
-            </h1>
           </div>
         ) : (
           <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-md border border-gray-300">
