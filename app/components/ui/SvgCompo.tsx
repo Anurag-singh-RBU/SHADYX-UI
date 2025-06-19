@@ -1,7 +1,7 @@
 'use client';
 import React, {useState} from 'react';
 import { Monitor, FileCode } from 'lucide-react';
-import { CodeBlock } from './code-block';
+import CodeBlock from './CodeBlock';
 import {ScriptCopyBtn} from './ScriptCopyBtn';
 import { ScriptImport } from './ScriptImport';
 import SvgMaskHero from './SvgMaskHero';
@@ -241,7 +241,7 @@ export default SvgMaskHero;
           <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-md overflow-hidden border border-gray-300">
             <CodeBlock
               language="typescript"
-              filename="IlluminationComp.tsx"
+              fileName="SvgMaskHero.tsx"
               code={codeString}
             />
           </div>

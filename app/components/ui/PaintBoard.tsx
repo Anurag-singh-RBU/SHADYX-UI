@@ -75,7 +75,6 @@ export const PaintBoard = () => {
         <Toaster position="top-right" />
         <div className="bg-white rounded-xl shadow-xl p-4 border border-gray-100">
           <div className="flex flex-col md:flex-row gap-4">
-            {/* Toolbar */}
             <div className="md:w-60  flex-shrink-0">
               <ToolBar 
                 activeTool={activeTool} 
@@ -89,7 +88,6 @@ export const PaintBoard = () => {
               </div>
             </div>
 
-            {/* Canvas */}
             <div className="flex-1 flex justify-center">
               <div className="bg-white rounded border border-gray-300 overflow-hidden md:w-[350px] lg:w-[700px] lg:block">
                 <canvas 

@@ -3,7 +3,7 @@
 import React, { useState, useRef } from 'react';
 import { Monitor, FileCode } from 'lucide-react';
 import { ParallaxHero } from './ParallaxHero';
-import { CodeBlock } from './code-block';
+import CodeBlock from './CodeBlock';
 // import { Copy, Check } from 'lucide-react';
 import { ScriptCopyBtn } from './ScriptCopyBtn';
 import { ScriptImport } from './ScriptImport';
@@ -154,7 +154,7 @@ export const ParallaxHero: React.FC<ParallaxHeroProps> = ({ parallaxRef }) => {
           <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-md border border-gray-300">
             <CodeBlock
               language="typescript"
-              filename="ParallaxHero.tsx"
+              fileName="ParallaxHero.tsx"
               code={codeString}
             />
           </div>

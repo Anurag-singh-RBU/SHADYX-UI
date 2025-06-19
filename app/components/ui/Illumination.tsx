@@ -1,7 +1,7 @@
 'use client';
 import React, {useState} from 'react';
 import { Monitor, FileCode } from 'lucide-react';
-import { CodeBlock } from './code-block';
+import CodeBlock from './CodeBlock';
 // import { Copy, Check } from 'lucide-react';
 import IlluminationComp from './IlluminationComp';
 import {ScriptCopyBtn} from './ScriptCopyBtn';
@@ -108,16 +108,16 @@ import { Lamp } from 'lucide-react';
       </div>
 
       {/* Content Switcher */}
-      <div className="sm:mt-10 rounded-md mt-5 min-h-[400px] -mb-25 sm:mb-0 relative">
+       <div className="sm:mt-10 rounded-md mt-5 min-h-[400px] -mb-25 sm:mb-0 relative">
         {activeTab === 'preview' ? (
-          <div className="relative rounded-md overflow-hidden sm:h-[500px] h-[300px] bg-gradient-to-b from-black via-gray-900 to-black">
+          <div className="relative rounded-md overflow-hidden sm:ml-1 sm:mr-3 sm:h-[500px] h-[300px] bg-gradient-to-b from-black via-gray-900 to-black">
             <IlluminationComp/>
           </div>
         ) : (
           <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-md overflow-hidden border border-gray-300">
             <CodeBlock
               language="typescript"
-              filename="IlluminationComp.tsx"
+              fileName="IlluminationComp.tsx"
               code={codeString}
             />
           </div>
