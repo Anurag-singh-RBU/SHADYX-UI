@@ -27,35 +27,36 @@ const Spotlight: React.FC = () => {
   const codeString = `import React from 'react';
 import { Lamp } from 'lucide-react';
   
-  const IlluminationComp = () => {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-black">
-        <div className="relative text-center -mt-38">
-          <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
-            <Lamp className="w-16 h-16 text-yellow-400 animate-pulse" />
-          </div>
-  
-          <div className="absolute -top-20 left-1/2 
-          transform -translate-x-1/2 w-96 h-96 bg-gradient-radial from-yellow-400/30 via-yellow-400/10 
-          to-transparent rounded-full animate-glow pointer-events-none"></div>
-  
-          <h1 className="sm:text-7xl text-2xl md:text-9xl font-bold relative">
-            <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent animate-pulse">
-              ILLUMINATED
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/50 via-white/50 to-yellow-400/50 
-            bg-clip-text text-transparent animate-glow blur-sm"></div>
-          </h1>
-  
-          <p className="text-xl text-gray-300 mt-6 animate-fade-in-scale" style={{ animationDelay: '2s' }}>
-            Light up your ideas
-          </p>
+const IlluminationComp = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-black">
+      <div className="relative text-center -mt-38">
+        <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
+          <Lamp className="w-16 h-16 text-yellow-400 animate-pulse" />
         </div>
+
+        <div className="absolute -top-20 left-1/2 
+        transform -translate-x-1/2 w-96 h-96 bg-gradient-radial from-yellow-400/30 via-yellow-400/10 
+        to-transparent rounded-full animate-glow pointer-events-none"></div>
+
+        <h1 className="sm:text-7xl text-2xl md:text-9xl font-bold relative">
+          <span className="bg-gradient-to-r from-yellow-300 via-white
+          to-yellow-300 bg-clip-text text-transparent animate-pulse">
+            ILLUMINATED
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/50 via-white/50 to-yellow-400/50 
+          bg-clip-text text-transparent animate-glow blur-sm"></div>
+        </h1>
+
+        <p className="text-xl text-gray-300 mt-6 animate-fade-in-scale" style={{ animationDelay: '2s' }}>
+          Light up your ideas
+        </p>
       </div>
-    );
-  };
+    </div>
+  );
+};
   
-  export default IlluminationComp;
+export default IlluminationComp;
 `;
 
   return (

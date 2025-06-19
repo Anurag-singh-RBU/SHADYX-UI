@@ -69,11 +69,13 @@ export const ParallaxHero: React.FC<ParallaxHeroProps> = ({ parallaxRef }) => {
         </div>
         <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[54deg]">
           <div className="w-4 h-4 sm:w-8 sm:h-8 mt-[10rem] sm:ml-25 sm:mt-[8rem] 
-          bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full xl:block transition-transform duration-500 ease-out translate-y-0 opacity-100" />
+          bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full xl:block 
+          transition-transform duration-500 ease-out translate-y-0 opacity-100" />
         </div>
         <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[65deg]">
           <div className="w-8 h-8 -ml-1 mt-[5rem] sm:w-10 sm:h-10 sm:mt-[8rem] 
-          bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out translate-y-0 opacity-100" />
+          bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform 
+          duration-500 ease-out translate-y-0 opacity-100" />
         </div>
         <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[85deg]">
           <div className="w-6 h-6 -ml-5 

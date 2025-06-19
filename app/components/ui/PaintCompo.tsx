@@ -80,7 +80,8 @@ export const PaintBoard = () => {
   };
 
   return (
-    <div className="h-full font-JB bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 p-4">
+    <div className="h-full font-JB bg-gradient-to-br from-purple-50
+     via-blue-50 to-indigo-50 p-4">
       <div className="max-w-5xl mx-auto">
         <Toaster position="top-right" />
         <div className="bg-white rounded-xl shadow-xl p-4 border border-gray-100">
@@ -98,7 +99,8 @@ export const PaintBoard = () => {
             </div>
 
             <div className="flex-1 flex justify-center">
-              <div className="bg-white rounded border border-gray-300 overflow-hidden md:w-[350px] lg:w-[700px] lg:block">
+              <div className="bg-white rounded border border-gray-300 
+              overflow-hidden md:w-[350px] lg:w-[700px] lg:block">
                 <canvas 
                   ref={canvasRef} 
                   className="block w-[700px] h-[400px] max-w-full"/>
@@ -165,7 +167,8 @@ export const ToolBar: React.FC<ToolBarProps> = ({
           <button
             onClick={() => onBrushSizeChange(Math.max(1, brushSize - 1))}
             disabled={brushSize <= 1}
-            className="p-2 rounded-lg border bg-gray-200 hover:bg-gray-300 disabled:opacity-50">
+            className="p-2 rounded-lg border bg-gray-200 hover:bg-gray-300 
+            disabled:opacity-50">
             <FaMinus />
           </button>
 
@@ -189,7 +192,8 @@ export const ToolBar: React.FC<ToolBarProps> = ({
 
       <button
         onClick={onClear}
-        className="w-full flex items-center justify-center gap-3 h-12 px-2 rounded-lg bg-red-500 text-white hover:bg-red-600">
+        className="w-full flex items-center justify-center gap-3 h-12 px-2
+        rounded-lg bg-red-500 text-white hover:bg-red-600">
         <FaUndo />
         Clear Canvas
       </button>
@@ -239,7 +243,8 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({ color, onChange }) => 
   };
 
   return (
-    <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 sm:p-3 sm:rounded-lg sm:max-w-xs sm:mx-auto">
+    <div className="bg-gray-50 rounded-xl p-4 border 
+    border-gray-200 sm:p-3 sm:rounded-lg sm:max-w-xs sm:mx-auto">
       <h3 className="font-semibold text-gray-800 text-center mb-4 sm:text-base -ml-6">🎨 Colors</h3>
       <div className="mb-4 text-center">
         <div 
@@ -253,7 +258,8 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({ color, onChange }) => 
             key={predefinedColor}
             onClick={() => handleColorClick(predefinedColor)}
             className={\`w-12 h-12 sm:w-9 sm:h-9 rounded-lg border-2 transition-all hover:scale-110 
-            \${color === predefinedColor ? "border-gray-800 shadow-lg" : "border-gray-300 hover:border-gray-500"}\`}
+            \${color === predefinedColor ? "border-gray-800 shadow-lg" : "border-gray-300 
+            hover:border-gray-500"}\`}
             style={{ backgroundColor: predefinedColor }}/>
         ))}
       </div>
