@@ -316,7 +316,8 @@ body {
 #para,
 #paraTwo,
 #paraThree,
-#paraFour{
+#paraFour,
+#paraFive {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -344,11 +345,17 @@ body {
   background-image: url("paintboard.png");
 }
 
+#paraFive {
+  background-color: black;
+  background-image: url("planet.png");
+}
+
 @media (max-width: 640px) {
   #para,
   #paraTwo,
   #paraThree,
-  #paraFour {
+  #paraFour,
+  #paraFive {
     width: 100%;
     max-width: 350px;
     height: 200px;

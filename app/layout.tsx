@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <SquigglyUnderline></SquigglyUnderline>
         {children}
-        <Analytics />
+        <Analytics/>
         <Footerdemo></Footerdemo>
       </body>
     </html>

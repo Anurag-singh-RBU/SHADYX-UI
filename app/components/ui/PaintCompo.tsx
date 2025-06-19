@@ -297,7 +297,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({ color, onChange }) => 
       {/* Tags */}
       <div className="flex flex-wrap sm:gap-2 gap-3 -ml-2 mb-6 font-JB">
         {['Lamp', 'illuminated', 'Section'].map((tag, index) => (
-          <div key={tag} className={`relative rounded-full p-[2px] tag-wrapper tag-${index}`}>
+          <div key={tag} className={`relative sm:ml-0 ml-1 rounded-full p-[2px] tag-wrapper tag-${index}`}>
             <div className="relative z-10 bg-black text-white text-sm sm:px-4 px-3 py-1 rounded-full font-medium">
               {tag}
             </div>
