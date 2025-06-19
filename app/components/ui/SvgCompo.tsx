@@ -39,7 +39,8 @@ const SvgMaskHero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full bg-white overflow-hidden flex items-center justify-center">
+    <div className="relative w-full h-full bg-white overflow-hidden 
+    flex items-center justify-center">
       <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <mask id="liquidMask">
@@ -102,8 +103,10 @@ const SvgMaskHero = () => {
 
           <path
             d={
-              \`M0,\${70 + Math.cos(mousePosition.y * 0.1) * 15} Q30,\${80 + Math.sin(mousePosition.x * 0.12) * 20} 60,
-              \${60 + Math.cos(mousePosition.y * 0.15) * 25} T100,\${70 + Math.sin(mousePosition.x * 0.1) * 15}\`
+              \`M0,\${70 + Math.cos(mousePosition.y * 0.1) * 15} Q30,\${80 + 
+              Math.sin(mousePosition.x * 0.12) * 20} 60,
+              \${60 + Math.cos(mousePosition.y * 0.15) * 25} T100,\${70 + 
+              Math.sin(mousePosition.x * 0.1) * 15}\`
             }
             stroke="rgba(139, 92, 246, 0.5)"
             strokeWidth="2"
@@ -111,7 +114,8 @@ const SvgMaskHero = () => {
           >
             <animate
               attributeName="d"
-              values="M0,70 Q30,80 60,60 T100,70;M0,80 Q30,60 60,80 T100,60;M0,70 Q30,80 60,60 T100,70"
+              values="M0,70 Q30,80 60,60 T100,70;M0,80 Q30,60 60,80 
+              T100,60;M0,70 Q30,80 60,60 T100,70"
               dur="8s"
               repeatCount="indefinite"
             />
@@ -150,30 +154,38 @@ const SvgMaskHero = () => {
           )}
         >
           <h1
-            className="text-5xl md:text-8xl font-bold text-gray-900 mb-8 leading-tight transition-transform duration-300 ease-out"
+            className="text-5xl md:text-8xl font-bold text-gray-900 
+            mb-8 leading-tight transition-transform duration-300 ease-out"
             style={{
               transform:
-                'translate(' + ((mousePosition.x - 50) / 15) + '%, ' + ((mousePosition.y - 50) / 15) + '%) ' +
+                'translate(' + ((mousePosition.x - 50) / 15) + '%, ' + 
+                ((mousePosition.y - 50) / 15) + '%) ' +
                 'scale(' + (textActive ? 1.1 : 1) + ') ' +
                 'rotate(' + ((mousePosition.x - 50) / 50) + 'deg)'
             }}
           >
             <span className="block">SVG</span>
-            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 
+            to-pink-600 bg-clip-text text-transparent">
               Effect
             </span>
           </h1>
-          <p className="text-xl hidden sm:block text-gray-600 -mt-5 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl hidden sm:block text-gray-600 -mt-5 mb-10 
+          max-w-2xl mx-auto leading-relaxed">
             Experience the power of SVG masking with interactive liquid effects
             that respond to your cursor movement
           </p>
         </div>
       </div>
 
-      <div className="absolute top-8 left-8 w-16 h-16 border-l-4 border-t-4 border-gray-300 opacity-30"></div>
-      <div className="absolute top-8 right-8 w-16 h-16 border-r-4 border-t-4 border-gray-300 opacity-30"></div>
-      <div className="absolute bottom-8 left-8 w-16 h-16 border-l-4 border-b-4 border-gray-300 opacity-30"></div>
-      <div className="absolute bottom-8 right-8 w-16 h-16 border-r-4 border-b-4 border-gray-300 opacity-30"></div>
+      <div className="absolute top-8 left-8 w-16 h-16 border-l-4 
+      border-t-4 border-gray-300 opacity-30"></div>
+      <div className="absolute top-8 right-8 w-16 h-16 border-r-4 
+      border-t-4 border-gray-300 opacity-30"></div>
+      <div className="absolute bottom-8 left-8 w-16 h-16 border-l-4 
+      border-b-4 border-gray-300 opacity-30"></div>
+      <div className="absolute bottom-8 right-8 w-16 h-16 border-r-4 
+      border-b-4 border-gray-300 opacity-30"></div>
     </div>
   );
 };
