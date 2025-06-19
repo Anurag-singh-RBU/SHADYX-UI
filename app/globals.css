@@ -373,17 +373,26 @@ body {
 }
 
 .tag-0 .bg-black {
-  background-color: #1d4ed8; /* Blue */
+  background-color: #ecf3fe !important; /* Soft Blue */
+  color: #1d4ed8 !important; /* Dark Blue text */
 }
+
 .tag-1 .bg-black {
-  background-color: #047857; /* Emerald */
+  background-color: #ecfdf5 !important; /* Soft Emerald */
+  color: #047857 !important; /* Emerald text */
 }
+
 .tag-2 .bg-black {
-  background-color: #b45309; /* Amber */
+  background-color: #fff7ed !important; /* Soft Amber */
+  color: #b45309 !important; /* Amber text */
 }
+
 .tag-3 .bg-black {
-  background-color: #6b21a8; /* Violet */
+  background-color: #f3f4f6 !important; /* Gray-100 */
+  color: #374151 !important;           /* Gray-700 */
 }
+
+
 
 #githubicon{
 
