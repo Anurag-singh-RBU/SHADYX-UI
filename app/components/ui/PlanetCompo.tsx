@@ -176,10 +176,15 @@ export default EarthCanvas;
               />
       </div>
 
+        <div className="flex items-center border-b border-gray-300 mb-3 text-sm">
+            <h3 className="text-base sm:font-semibold font-bold mb-2 sm:ml-2">Add Some Files</h3>
+        </div>
+        <p className='mb-8 sm:ml-2 text-sm'>Add these files. <a className="text-sm font-bold text-violet-500 hover:text-blue-700" href='https://github.com/Anurag-singh-RBU/Planet-Shadyxui'>View Files</a></p>
+
       {/* Add util file */}
             <div className="relative -mb-15">
-              <h3 className="text-base sm:font-semibold font-bold mb-2 ml-2">Update App file</h3>
-              <p className="text-sm text-muted-foreground mb-2 ml-2">App.jsx</p>
+              <h3 className="text-base sm:font-semibold font-bold mb-2 sm:ml-2">Update App file</h3>
+              <p className="text-sm text-muted-foreground mb-2 sm:ml-2">App.jsx</p>
                <ScriptImport command="<EarthCanvas>"/>
             </div>
     </div>

@@ -279,8 +279,8 @@ export default SvgMaskHero;
       />
       {/* Add util file */}
       <div className="relative -mb-15">
-        <h3 className="text-base sm:font-semibold font-bold mb-2 ml-2">Update App file</h3>
-        <p className="text-sm text-muted-foreground mb-2 ml-2">App.jsx</p>
+        <h3 className="text-base sm:font-semibold font-bold mb-2 sm:ml-2">Update App file</h3>
+        <p className="text-sm text-muted-foreground mb-2 sm:ml-2">App.jsx</p>
          <ScriptImport command="<SvgMaskHero/>" />
       </div>
     </div>
