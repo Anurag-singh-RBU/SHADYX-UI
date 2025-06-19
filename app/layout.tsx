@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SquigglyUnderline } from "./SquigglyUnderline";
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <SquigglyUnderline></SquigglyUnderline>
         {children}
+        <Analytics />
         <Footerdemo></Footerdemo>
       </body>
     </html>
