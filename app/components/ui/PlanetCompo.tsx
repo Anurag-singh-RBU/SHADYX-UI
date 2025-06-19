@@ -154,7 +154,7 @@ export default EarthCanvas;
       </div>
 
  <div className="sm:px-32 sm:pt-10 pb-10 font-JB">
-      <h2 className="text-3xl font-bold mb-6 sm:ml-1 mt-15">Installation</h2>
+      <h2 className="text-3xl font-bold mb-6 sm:ml-1 mt-14">Installation</h2>
 
       {/* Tabs */}
       <div className="flex items-center border-b border-gray-300 mb-6 text-sm">
