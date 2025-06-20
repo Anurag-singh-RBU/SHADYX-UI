@@ -15,8 +15,8 @@ export const PaintBoard = () => {
     if (!canvasRef.current) return;
 
     const canvas = new FabricCanvas(canvasRef.current, {
-      width: 700,
-      height: 200,
+      width: 400,
+      height: 400, // <--- set height same as CSS
       backgroundColor: "#ffffff",
     });
 
@@ -32,7 +32,6 @@ export const PaintBoard = () => {
     return () => {
       canvas.dispose();
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -75,7 +74,7 @@ export const PaintBoard = () => {
         <Toaster position="top-right" />
         <div className="bg-white rounded-xl shadow-xl p-4 border border-gray-100">
           <div className="flex flex-col md:flex-row gap-4">
-            <div className="md:w-60  flex-shrink-0">
+            <div className="md:w-60 flex-shrink-0">
               <ToolBar 
                 activeTool={activeTool} 
                 onToolClick={handleToolClick} 
@@ -89,10 +88,11 @@ export const PaintBoard = () => {
             </div>
 
             <div className="flex-1 flex justify-center">
-              <div className="bg-white rounded border border-gray-300 overflow-hidden md:w-[350px] lg:w-[700px] lg:block">
+              <div className="bg-white rounded border border-gray-300 overflow-hidden md:w-[300px] lg:w-[600px] lg:block">
                 <canvas 
-                  ref={canvasRef} 
-                  className="block w-[700px] h-[400px] max-w-full" 
+                  ref={canvasRef}
+                  width={400}    // match CSS width  // match CSS height
+                  className="block w-[700px] sm:h-[400px] max-w-full"
                 />
               </div>
             </div>
