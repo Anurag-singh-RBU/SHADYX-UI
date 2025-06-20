@@ -153,7 +153,7 @@ export const ParallaxHero: React.FC<ParallaxHeroProps> = ({ parallaxRef }) => {
             </h1>
           </div>
         ) : (
-          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-md border border-gray-300">
+          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-md">
             <CodeBlock
               language="typescript"
               fileName="ParallaxHero.tsx"

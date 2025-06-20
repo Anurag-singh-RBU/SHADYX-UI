@@ -115,7 +115,7 @@ export default IlluminationComp;
             <IlluminationComp/>
           </div>
         ) : (
-          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-md overflow-hidden border border-gray-300">
+          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-md overflow-hidden">
             <CodeBlock
               language="typescript"
               fileName="IlluminationComp.tsx"
