@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { ChevronRight } from "lucide-react";
 
 export function Introduction() {
   return (
-    <div className="group relative mx-auto flex w-fit items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] ">
+    <Link href="/about" className="group relative mx-auto flex w-fit items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] cursor-pointer no-underline">
       <span
         className={cn(
           "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]"
@@ -25,7 +26,6 @@ export function Introduction() {
       <ChevronRight
         className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
       />
-    </div>
+    </Link>
   );
 }
-
