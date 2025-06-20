@@ -118,34 +118,38 @@ export default function Home() {
         <Working/>
         <ReadDocs/>
             <div className="h-auto flex sm:flex-row flex-col sm:justify-center sm:gap-25 justify-center items-center sm:mt-3 sm:mb-15 my-5 sm:px-23">
-              <section className="text-center hidden sm:block px-4 sm:py-20 py-10 space-y-6 bg-white text-black font-JB">
-                <h1 className="text-2xl md:text-5xl font-bold leading-tight">
-                  Frontend Development <br/> at Lightning Speed
-                </h1>
+            <div>
+                <TerminalDemo/>
+              </div>
 
-              <p className="text-xl md:text-2xl flex flex-wrap items-center justify-center gap-2">
+              <section className="text-center sm:block sm:px-4 sm:py-20 pt-10 space-y-6 bg-white text-black font-JB">
+                <h1 className="text-2xl mb-2 md:text-5xl font-bold leading-tight">
+                  Frontend Development </h1><span className="text-2xl hidden sm:block md:text-5xl font-bold leading-tight">at Lightning Speed</span> 
+                
+
+              <p className="text-xl mt-5 md:text-2xl flex flex-wrap items-center justify-center gap-2">
                 <Cover>
                 <div
                   id="spacing"
-                  className="text-2xl text-center font-bold mono-text sm:text-center">
+                  className="sm:text-2xl text-xl text-center font-bold mono-text sm:text-center">
                   Design
                 </div>
               </Cover>{" "}
                 to{" "}
-                <span className="text-yellow-500 font-mono text-2xl">
+                <span className="text-yellow-500 font-mono sm:text-2xl text-xl">
                   {"{code}"}
                 </span>{" "}
                 in a{"  "}
                 <Cover>
                 <div
                   id="spacing"
-                  className="text-2xl text-center font-bold mono-text sm:text-center">
+                  className="sm:text-2xl text-xl text-center font-bold mono-text sm:text-center">
                   Flash
                 </div>
               </Cover>
               </p>
 
-              <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:pt-4 pt-2">
                 <Button className="bg-black text-white cursor-pointer px-6 py-3 rounded-full font-bold text-sm hover:bg-gray-900">
                   <a href="https://www.linkedin.com/in/anuragsinghrbu/">Follow Me</a>
                 </Button>
@@ -155,14 +159,10 @@ export default function Home() {
                 </Button>
               </div>
 
-              <p className="max-w-xl text-sm text-gray-700 pt-4 leading-relaxed mx-auto">
+              <p className="max-w-xl text-sm hidden sm:block text-gray-700 pt-4 leading-relaxed mx-auto">
                 Build UI 10x faster : Copy paste the components and use them in your websites without having to worry about styling and animations.
               </p>
             </section>
-            <div>
-                <TerminalDemo/>
-              </div>
-
         </div>
 
       </div>
