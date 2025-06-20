@@ -340,7 +340,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({ color, onChange }) => 
             <PaintBoard></PaintBoard>
           </div>
         ) : (
-         <div className="sm:h-[500px] h-[300px] sm:ml-10 sm:mr-3 overflow-y-auto font-JB overflow-hidden">
+         <div className="sm:h-[500px] h-[300px] rounded-xl sm:ml-10 sm:mr-3 overflow-y-auto font-JB border border-gray-200 overflow-hidden">
           <CodeBlock
             code={codeString} 
             fileName="PaintBoard.tsx" 
@@ -371,14 +371,14 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({ color, onChange }) => 
       <div className="flex items-center border-b border-gray-300 mb-6 text-sm">
         <h3 className="text-base sm:font-semibold font-bold mb-2 sm:ml-2">Add into your project</h3>
       </div>
-          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB overflow-hidden">
+          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-xl border border-gray-200 overflow-hidden">
             <CodeBlock
               language="typescript"
               fileName="src/ToolBar.tsx"
               code={ToolbarCode}
             />
           </div>
-          <div className="sm:h-[500px] h-[300px] mt-8 mb-12 overflow-y-auto font-JB overflow-hidden border">
+          <div className="sm:h-[500px] h-[300px] mt-8 mb-12 overflow-y-auto font-JB overflow-hidden rounded-xl border border-gray-200">
             <CodeBlock
               language="typescript"
               fileName="src/ColorPicker.tsx"
