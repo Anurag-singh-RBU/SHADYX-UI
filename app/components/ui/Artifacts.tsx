@@ -57,6 +57,16 @@ const Artifacts = () => {
           Shape vision with beautiful SVG masks
         </h4>
       </Link>
+
+      <Link href="/navbarcomponent" className="flex flex-col cursor-pointer">
+        <div className="bg-[rgb(216,231,251)] rounded-2xl overflow-hidden py-3">
+          <div id="paraSix"/>
+        </div>
+        <h1 className="text-center text-xl mt-6 font-bold">Resizable Navbar</h1>
+        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium">
+          Shape vision with beautiful SVG masks
+        </h4>
+      </Link>
     </div>
   );
 };

@@ -19,7 +19,6 @@ code, pre, .mono-text {
   font-family: Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-
 #spacing{
 
   word-spacing: 0px;
@@ -84,7 +83,19 @@ code, pre, .mono-text {
     }
 
   }
-}
+  --animate-line-shadow: line-shadow 15s linear infinite
+;
+  @keyframes line-shadow {
+  0% {
+    background-position: 0 0;
+
+    }
+  100% {
+    background-position: 100% -100%;
+
+    }
+
+  }}
 
 @import "tailwindcss";
 
@@ -317,7 +328,8 @@ body {
 #paraTwo,
 #paraThree,
 #paraFour,
-#paraFive {
+#paraFive,
+#paraSix {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -350,12 +362,18 @@ body {
   background-image: url("planet.png");
 }
 
+#paraSix {
+  background-color: rgb(216,231,251);
+  background-image: url("navbar.png");
+}
+
 @media (max-width: 640px) {
   #para,
   #paraTwo,
   #paraThree,
   #paraFour,
-  #paraFive {
+  #paraFive,
+  #paraSix {
     width: 100%;
     max-width: 350px;
     height: 200px;
@@ -415,4 +433,3 @@ body {
   color: rgb(103,159,140) !important; /* greenish */
   background-color: transparent !important;
 }
-

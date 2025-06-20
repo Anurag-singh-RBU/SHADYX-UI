@@ -12,6 +12,10 @@ import { TerminalDemo } from "./components/ui/TerminalDemo";
 import { Cover } from "./components/ui/cover";
 import { Spotlight } from "./components/ui/spotlight-new";
 import { getColors } from "@/app/lib/colors"
+import { Button } from "@/components/ui/button"; // agar tu shadcn use kar raha hai
+import { LineShadowText } from "@/components/magicui/line-shadow-text";
+import clsx from "clsx";
+import { LineShadowTextDemo } from "./components/ui/LineShadowTextDemo";
 
 export default function Home() {
   const colorGroups = getColors();
@@ -40,8 +44,7 @@ export default function Home() {
               <Cover>
                 <div
                   id="spacing"
-                  className="text-3xl sm:text-7xl text-center font-extrabold sm:text-center sm:pb-4 sm:pt-2 font-JB px-4 sm:px-5"
-                >
+                  className="text-3xl sm:text-7xl text-center font-extrabold sm:text-center sm:pb-4 sm:pt-2 font-JB px-4 sm:px-5">
                   from Copy to Vibe
                 </div>
               </Cover>
@@ -77,8 +80,7 @@ export default function Home() {
                   height="16"
                   viewBox="0 0 24 24"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.75 8.75L14.25 12L10.75 15.25"
                     stroke="currentColor"
@@ -94,8 +96,7 @@ export default function Home() {
               href="https://github.com/your-repo"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-full sm:w-auto sm:gap-3 gap-3 font-JB text-center font-bold rounded-md border border-gray-300 bg-white sm:mt-0 px-5 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100"
-            >
+              className="flex items-center justify-center w-full sm:w-auto sm:gap-3 gap-3 font-JB text-center font-bold rounded-md border border-gray-300 bg-white sm:mt-0 px-5 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -116,10 +117,52 @@ export default function Home() {
 
         <Working/>
         <ReadDocs/>
-        <div className="h-auto flex sm:flex-row flex-col sm:justify-between justify-center items-center sm:mt-3 sm:mb-15 my-5 sm:px-23">
-          <div>
-            <TerminalDemo/>
-          </div>
+            <div className="h-auto flex sm:flex-row flex-col sm:justify-center sm:gap-25 justify-center items-center sm:mt-3 sm:mb-15 my-5 sm:px-23">
+              <section className="text-center hidden sm:block px-4 sm:py-20 py-10 space-y-6 bg-white text-black font-JB">
+                <h1 className="text-2xl md:text-5xl font-bold leading-tight">
+                  Frontend Development <br/> at Lightning Speed
+                </h1>
+
+              <p className="text-xl md:text-2xl flex flex-wrap items-center justify-center gap-2">
+                <Cover>
+                <div
+                  id="spacing"
+                  className="text-2xl text-center font-bold mono-text sm:text-center">
+                  Design
+                </div>
+              </Cover>{" "}
+                to{" "}
+                <span className="text-yellow-500 font-mono text-2xl">
+                  {"{code}"}
+                </span>{" "}
+                in a{"  "}
+                <Cover>
+                <div
+                  id="spacing"
+                  className="text-2xl text-center font-bold mono-text sm:text-center">
+                  Flash
+                </div>
+              </Cover>
+              </p>
+
+              <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+                <Button className="bg-black text-white cursor-pointer px-6 py-3 rounded-full font-bold text-sm hover:bg-gray-900">
+                  <a href="https://www.linkedin.com/in/anuragsinghrbu/">Follow Me</a>
+                </Button>
+
+                <Button variant="outline" className="text-center font-JB font-bold rounded-full border border-gray-300 bg-white sm:mt-0 px-5 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100">
+                  <a href="/docs">Get Started</a>
+                </Button>
+              </div>
+
+              <p className="max-w-xl text-sm text-gray-700 pt-4 leading-relaxed mx-auto">
+                Build UI 10x faster : Copy paste the components and use them in your websites without having to worry about styling and animations.
+              </p>
+            </section>
+            <div>
+                <TerminalDemo/>
+              </div>
+
         </div>
 
       </div>
