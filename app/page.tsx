@@ -117,7 +117,7 @@ export default function Home() {
 
         <Working/>
         <ReadDocs/>
-            <div className="h-auto flex sm:flex-row flex-col sm:justify-center sm:gap-25 justify-center items-center sm:mt-3 sm:mb-15 my-5 sm:px-23">
+            <div className="h-auto md:hidden lg:flex flex sm:flex-row flex-col sm:justify-center sm:gap-25 justify-center items-center sm:mt-3 sm:mb-15 my-5 sm:px-23">
             <div>
                 <TerminalDemo/>
               </div>
