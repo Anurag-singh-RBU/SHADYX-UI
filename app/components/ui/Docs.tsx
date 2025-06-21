@@ -63,7 +63,7 @@ const Docs = () => {
             Run <code className="bg-gray-100 px-1 py-0.5 rounded text-xs font-mono">init</code> to create a new React project or to setup an existing one :
           </p>
           <div className="bg-gray-100 px-4 py-3 flex justify-between items-center text-sm font-mono rounded-lg border text-card-foreground shadow-sm w-full">
-            <span>npx create-react-app@latest</span>
+            <span>npm create vite@latest</span>
             <button
               // Changed ID from 'step1' to 'createReactApp'
               onClick={() => handleCopy('npx create-react-app@latest', 'createReactApp')}

@@ -90,11 +90,11 @@ export default EarthCanvas;
   return (
     <div className="w-auto sm:mt-35 mt-33 sm:ml-32 ml-8 sm:mr-25 mr-8 relative">
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-gray-900 mb-3 font-JB">Parallax</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-3 font-JB">3D Planet</h1>
 
       {/* Subheading */}
       <p className="sm:text-md text-sm text-gray-600 mb-4 mono-text text-justify">
-        A parallax effect with Tailwind CSS which is good for drawing attention to a particular element on the page.
+        A charming little 3D planet designed to bring personality and a playful touch to your interface.
       </p>
 
       {/* Tags */}

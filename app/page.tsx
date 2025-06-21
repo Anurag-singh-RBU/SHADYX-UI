@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button"; // agar tu shadcn use kar raha 
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import clsx from "clsx";
 import { LineShadowTextDemo } from "./components/ui/LineShadowTextDemo";
+import Link from "next/link";
 
 export default function Home() {
   const colorGroups = getColors();
@@ -60,7 +61,7 @@ export default function Home() {
                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" className="sm:ml-0 ml-8 h-10 w-10 sm:h-12 sm:w-12" />
               </span>
               <span className="h-full w-20 flex items-center justify-center">
-                <img src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4" alt="Aceternity UI" className="sm:ml-0 ml-5 h-9 w-9 sm:h-12 sm:w-12 rounded-full" />
+                <img src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4" alt="Shadcn UI" className="sm:ml-0 ml-5 h-9 w-9 sm:h-12 sm:w-12 rounded-full" />
               </span>
               <span className="h-full w-20 flex items-center justify-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" className="sm:ml-0 ml-3 h-8 w-8 sm:h-12 sm:w-12" />
@@ -69,31 +70,35 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row items-center justify-center sm:mt-8 mt-5 gap-4 sm:gap-8 flex-wrap">
-            <button className="relative group inline-flex w-full sm:w-auto items-center justify-center rounded-md bg-black px-5 py-2 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition-all duration-300">
-              <span className="absolute inset-0 rounded-md bg-[radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.3)_0%,rgba(56,189,248,0)_75%)] opacity-0"></span>
-              <span className="relative z-10 flex items-center space-x-2 cursor-pointer">
-                <span className="text-sm">✨</span>
-                <span className="font-bold font-JB"><span className="font-bold font-JB">Explore </span>Components</span>
-                <svg
-                  className="ml-1"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M10.75 8.75L14.25 12L10.75 15.25"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-            </button>
 
+            <Link href="/component" passHref legacyBehavior>
+              <a className="relative group inline-flex w-full sm:w-auto items-center justify-center rounded-md bg-black px-5 py-2 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition-all duration-300">
+                <span className="absolute inset-0 rounded-md bg-[radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.3)_0%,rgba(56,189,248,0)_75%)] opacity-0"></span>
+                <span className="relative z-10 flex items-center space-x-2 cursor-pointer">
+                  <span className="text-sm">✨</span>
+                  <span className="font-bold font-JB">
+                    <span className="font-bold font-JB">Explore </span>Components
+                  </span>
+                  <svg
+                    className="ml-1"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.75 8.75L14.25 12L10.75 15.25"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </Link>
             <a
-              href="https://github.com/your-repo"
+              href="https://github.com/Anurag-singh-RBU/SHADYX-UI"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full sm:w-auto sm:gap-3 gap-3 font-JB text-center font-bold rounded-md border border-gray-300 bg-white sm:mt-0 px-5 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100">
@@ -155,7 +160,7 @@ export default function Home() {
                 </Button>
 
                 <Button variant="outline" className="text-center font-JB font-bold rounded-full border border-gray-300 bg-white sm:mt-0 px-5 py-2 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100">
-                  <a href="/docs">Get Started</a>
+                  <a href="/about">Get Started</a>
                 </Button>
               </div>
 

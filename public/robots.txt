@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shadyxui.in/sitemap.xml

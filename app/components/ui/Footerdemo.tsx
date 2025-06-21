@@ -56,7 +56,7 @@ export default function Footerdemo() {
             <div>
               <h3 className="mb-4 text-lg -ml-3 font-bold font-JB">Contact Me</h3>
               <address className="space-y-3 gap-3 -ml-3 text-sm not-italic">
-                <a href="https://anuragfolio.netlify.app/" className="font-JB hover:text-violet-700">My Portfolio</a>
+                <a href="https://anuragwebdev.vercel.app/" className="font-JB hover:text-violet-700">My Portfolio</a>
                 <p className="font-JB mt-2">Phone : 7387857715</p>
               </address>
             </div>
@@ -66,56 +66,68 @@ export default function Footerdemo() {
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button variant="outline" size="icon" className="rounded-full">
-                        <Github className="h-4 w-4" />
-                        <span className="sr-only">GitHub</span>
-                      </Button>
+                      <a href="https://github.com/Anurag-singh-RBU" className="" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="icon" className="rounded-full cursor-pointer">
+                          <Github className="h-4 w-4 cursor-pointer" />
+                          <span className="sr-only">Github</span>
+                        </Button>
+                      </a>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>Check us out on GitHub</p>
+                      <p>Check me out on GitHub</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
+
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button variant="outline" size="icon" className="rounded-full">
-                        <Twitter className="h-4 w-4" />
-                        <span className="sr-only">Twitter</span>
-                      </Button>
+                      <a href="https://x.com/anuragRBU" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="icon" className="rounded-full">
+                          <Twitter className="h-4 w-4" />
+                          <span className="sr-only">Twitter</span>
+                        </Button>
+                      </a>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>Follow us on Twitter</p>
+                      <p>Follow me on Twitter</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
+
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button variant="outline" size="icon" className="rounded-full">
-                        <Instagram className="h-4 w-4" />
-                        <span className="sr-only">Instagram</span>
-                      </Button>
+                      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="icon" className="rounded-full">
+                          <Instagram className="h-4 w-4" />
+                          <span className="sr-only">Instagram</span>
+                        </Button>
+                      </a>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>Follow us on Instagram</p>
+                      <p>Follow me on Instagram</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
+
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button variant="outline" size="icon" className="rounded-full">
-                        <Linkedin className="h-4 w-4" />
-                        <span className="sr-only">LinkedIn</span>
-                      </Button>
+                      <a href="https://www.linkedin.com/in/anuragsinghrbu/" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="icon" className="rounded-full cursor-pointer">
+                          <Linkedin className="h-4 w-4" />
+                          <span className="sr-only">LinkedIn</span>
+                        </Button>
+                      </a>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>Connect with us on LinkedIn</p>
+                      <p>Connect with me on LinkedIn</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
               </div>
+
             </div>
           </div>
         </div>

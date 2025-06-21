@@ -271,10 +271,10 @@ export default SvgMaskHero;
       {/* Install Dependencies */}
       <ScriptCopyBtn
         commandMap={{
-          npm: "npm install",
-          yarn: "yarn",
-          pnpm: "pnpm install",
-          bun: "bun install",
+          npm: "npm install lucide-react",
+          yarn: "yarn add lucide-react",
+          pnpm: "pnpm add lucide-react",
+          bun: "bun add lucide-react",
         }}
       />
       {/* Add util file */}

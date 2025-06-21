@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {Menu, X, Linkedin, Twitter} from "lucide-react";
+import {Menu, X, Linkedin, Twitter, ChevronRight} from "lucide-react";
 import { usePathname } from "next/navigation";
 
 type NavItem = {
@@ -245,31 +245,25 @@ export const SquigglyUnderline = () => {
         {/* Right: CTA & Socials (Desktop only) */}
         <div className="hidden lg:flex items-center space-x-8">
           <a
-            href="https://github.com/your-repo"
+            href="/about"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-800 shadow-sm transition hover:bg-gray-100"
+            className="inline-flex font-semibold items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 16 16"
-              className="w-4 h-4 text-gray-700"
-            >
-              <path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.7.4.08.55-.18.55-.39 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.91-3.64-4.04 0-.89.31-1.61.82-2.18-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.47 7.47 0 0 1 2-.27 7.45 7.45 0 0 1 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.57.82 1.29.82 2.18 0 3.14-1.87 3.84-3.65 4.04.29.25.54.74.54 1.49 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0z" />
-            </svg>
-            Star on GitHub
+            Introduction
+    <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+
           </a>
 
           {/* Social Icons */}
           <div className="flex items-center space-x-3">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/anuragsinghrbu/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-5 h-5 text-gray-600 hover:text-blue-600 transition" />
             </a>
-              <a href="https://github.com/Anurag-singh-RBU" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Anurag-singh-RBU/SHADYX-UI" target="_blank" rel="noopener noreferrer">
                 <div id = "githubicon" className="w-6 h-6 text-gray-600 hover:text-black transition"/>
               </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/anuragRBU" target="_blank" rel="noopener noreferrer">
               <Twitter className="w-5 h-5 text-gray-500 hover:text-sky-500 transition" />
             </a>
           </div>

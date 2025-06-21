@@ -44,7 +44,7 @@ const Artifacts = () => {
         </div>
         <h1 className="text-center text-xl mt-6 font-bold">Paint Board</h1>
         <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium">
-          Shape vision with beautiful SVG masks
+          Where Crazy Ideas Take Brilliant Color
         </h4>
       </Link>
 
@@ -52,9 +52,9 @@ const Artifacts = () => {
         <div className="bg-black rounded-2xl overflow-hidden py-3">
           <div id="paraFive"/>
         </div>
-        <h1 className="text-center text-xl mt-6 font-bold">Paint Board</h1>
+        <h1 className="text-center text-xl mt-6 font-bold">3D Planet</h1>
         <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium">
-          Shape vision with beautiful SVG masks
+          Cutest World in the Universe
         </h4>
       </Link>
 
@@ -64,7 +64,7 @@ const Artifacts = () => {
         </div>
         <h1 className="text-center text-xl mt-6 font-bold">Resizable Navbar</h1>
         <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium">
-          Shape vision with beautiful SVG masks
+          Navigation That Adapts to You
         </h4>
       </Link>
     </div>

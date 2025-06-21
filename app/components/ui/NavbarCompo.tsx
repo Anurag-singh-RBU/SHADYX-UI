@@ -130,16 +130,16 @@ export default ResizableNavbar;
 return (
     <div className="w-auto sm:mt-35 mt-33 sm:ml-32 ml-8 sm:mr-25 mr-8 relative">
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-gray-900 mb-3 mono-text">Svg Masking</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-3 mono-text">Navbar</h1>
 
       {/* Subheading */}
       <p className="sm:text-md text-sm text-gray-600 mb-4 mono-text text-justify">
-        Create immersive experiences by revealing visuals through animated SVG shapes with smooth interactive effects.
+        A dynamic navigation bar that adjusts seamlessly to your layout needs.
       </p>
 
       {/* Tags */}
       <div className="flex flex-wrap sm:gap-2 gap-3 -ml-2 mb-6 font-JB">
-        {['Svg', 'Masking', 'Hero' , 'Special'].map((tag, index) => (
+        {['Navbar', 'Dynamic', 'Special'].map((tag, index) => (
           <div key={tag} className={`relative sm:ml-0 ml-1 rounded-full p-[2px] tag-wrapper tag-${index}`}>
             <div className="relative z-10 bg-black text-white text-sm sm:px-4 px-2 py-1 rounded-full font-medium">
               {tag}
