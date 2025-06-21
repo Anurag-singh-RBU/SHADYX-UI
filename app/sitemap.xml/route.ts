@@ -1,18 +1,20 @@
 // app/sitemap.xml/route.ts
 
+export const dynamic = "force-static"; // 🧠 Important for static site builds
+
 import { type NextRequest } from "next/server";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function GET(request: NextRequest) {
   const baseUrl = "https://shadyxui.in";
 
+  // ✅ Manually add all static routes you want in sitemap
   const pages = [
     "/", 
     "/component", 
     "/colors", 
     "/docs", 
     "/about"
-    // 👉 yahan tu apne sare important static pages add kar
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
