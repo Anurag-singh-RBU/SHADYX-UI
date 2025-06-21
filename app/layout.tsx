@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description:
     "Build sleek, beautiful UIs with Shadyx UI – a modern and customizable component kit built with Next.js and Tailwind CSS.",
   keywords: [
+    "shadcn ui",
+    "shadcn",
+    "shadcn navbar",
     "Shadyx UI",
     "shadyx ui",
     "Shadyx Ui",
