@@ -57,9 +57,6 @@ export const metadata: Metadata = {
   ],
   creator: "Anurag Singh",
   publisher: "Shadyx UI",
-  icons: {
-    icon: "favicon.ico",
-  },
   openGraph: {
     title: "Shadyx UI",
     description:
@@ -93,6 +90,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Optionally you can add apple touch icon for better iOS support */}
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SquigglyUnderline />
         {children}
