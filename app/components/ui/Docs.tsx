@@ -1,5 +1,14 @@
 'use client'
 
+export const metadata = {
+  title: "Docs | Shadyx UI",
+  description: "Step-by-step installation guide to set up Shadyx UI with React and Shadcn.",
+  alternates: {
+    canonical: "https://shadyxui.in/docs",
+  },
+};
+
+
 import React, { useState } from 'react'
 import Accordian from './Accordian'
 
