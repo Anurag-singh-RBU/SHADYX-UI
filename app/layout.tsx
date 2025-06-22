@@ -54,6 +54,12 @@ export const metadata: Metadata = {
   ],
   creator: "Anurag Singh",
   publisher: "Shadyx UI",
+
+  // ✅ Favicon configuration
+  icons: {
+    icon: "/favicon.ico", // or "/favicon.png" if you're using PNG
+  },
+
   openGraph: {
     title: "Shadyx UI",
     description:
