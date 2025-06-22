@@ -46,6 +46,9 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   metadataBase: new URL("https://shadyxui.in"),
+  alternates: {
+    canonical: "/", // 👈 global fallback canonical (home page)
+  },
   authors: [
     {
       name: "Anurag Singh",
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
   creator: "Anurag Singh",
   publisher: "Shadyx UI",
   icons: {
-    icon: "/favicon.ico", // ✅ Must be in /public
+    icon: "favicon.ico",
   },
   openGraph: {
     title: "Shadyx UI",
