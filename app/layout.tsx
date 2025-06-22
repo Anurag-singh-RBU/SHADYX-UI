@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -16,87 +16,111 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shadyx UI",
+  metadataBase: new URL("https://shadyxui.in"),
+  title: {
+    default: "Shadyx UI",
+    template: "%s | Shadyx UI",
+  },
   description:
     "Build sleek, beautiful UIs with Shadyx UI – a modern and customizable component kit built with Next.js and Tailwind CSS.",
   keywords: [
-    "shadcn ui",
-    "shadcn",
-    "shadcn navbar",
     "Shadyx UI",
-    "shadyx ui",
-    "Shadyx Ui",
-    "shadyx",
-    "Shadyx",
-    "Anurag Singh",
-    "anurag singh",
-    "React components",
-    "Anurag",
-    "frontend development",
-    "web development",
-    "UI library",
-    "Next.js",
-    "Tailwind CSS",
-    "Component library",
     "shadcn ui",
-    "aceternity",
-    "From Copy to Vibe",
-    "from copy to vibe",
-    "Vercel",
+    "React components",
+    "Tailwind CSS",
+    "UI library",
+    "frontend development",
+    "Next.js templates",
+    "Anurag Singh",
+    "component library",
+    "responsive design",
+    "modern UI kit",
+    "developer tools",
   ],
-  robots: "index, follow",
-  metadataBase: new URL("https://shadyxui.in"),
-  alternates: {
-    canonical: "/", // 👈 global fallback canonical (home page)
-  },
-  authors: [
-    {
-      name: "Anurag Singh",
-      url: "https://anuragwebdev.vercel.app/",
-    },
-  ],
+  authors: [{ name: "Anurag Singh", url: "https://anuragwebdev.vercel.app/" }],
   creator: "Anurag Singh",
   publisher: "Shadyx UI",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon-32x32.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
-    title: "Shadyx UI",
-    description:
-      "A sleek, developer-friendly UI kit built with Next.js & Tailwind CSS.",
-    url: "https://shadyxui.in",
-    siteName: "Shadyx UI",
     type: "website",
     locale: "en_US",
+    url: "https://shadyxui.in",
+    title: "Shadyx UI - Build Sleek React Components",
+    description:
+      "Build sleek, beautiful UIs with Shadyx UI – a modern and customizable component kit built with Next.js and Tailwind CSS.",
+    siteName: "Shadyx UI",
     images: [
       {
         url: "https://shadyxui.in/shadyxui.png",
         width: 1200,
         height: 630,
-        alt: "Shadyx UI",
+        alt: "Shadyx UI - React & Tailwind CSS Templates",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shadyx UI",
-    description: "Build sleek, beautiful UIs with Shadyx UI.",
-    creator: "@anuragrbu",
+    title: "Shadyx UI - From Copy to Vibe",
+    description:
+      "Build sleek, beautiful UIs with Shadyx UI – a modern and customizable component kit built with Next.js and Tailwind CSS.",
     images: ["https://shadyxui.in/shadyxui.png"],
+    creator: "@anuragrbu",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://shadyxui.in",
+    languages: {
+      "en-US": "https://shadyxui.in",
+    },
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        {/* Optionally you can add apple touch icon for better iOS support */}
-        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://shadyxui.in" />
+        {/* Agar future mein prerender links lagani ho toh yaha map karke add kar sakte ho */}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background font-sans`}
+      >
         <SquigglyUnderline />
         {children}
         <Analytics />
