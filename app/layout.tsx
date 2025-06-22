@@ -55,9 +55,8 @@ export const metadata: Metadata = {
   creator: "Anurag Singh",
   publisher: "Shadyx UI",
 
-  // ✅ Favicon configuration
   icons: {
-    icon: "/favicon.ico", // or "/favicon.png" if you're using PNG
+    icon: "/favicon.ico", // also fine to keep this
   },
 
   openGraph: {
@@ -81,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shadyx UI",
     description: "Build sleek, beautiful UIs with Shadyx UI.",
-    creator: "@anuragrbu", // Optional: change to your actual Twitter handle
+    creator: "@anuragrbu",
     images: ["https://shadyxui.in/shadyxui.png"],
   },
 };
@@ -93,6 +92,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* 👇 Forcefully injecting favicon manually */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
