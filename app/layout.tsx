@@ -54,11 +54,9 @@ export const metadata: Metadata = {
   ],
   creator: "Anurag Singh",
   publisher: "Shadyx UI",
-
   icons: {
-    icon: "/favicon.ico", // also fine to keep this
+    icon: "/favicon.ico", // ✅ Must be in /public
   },
-
   openGraph: {
     title: "Shadyx UI",
     description:
@@ -92,13 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* 👇 Forcefully injecting favicon manually */}
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SquigglyUnderline />
         {children}
         <Analytics />
