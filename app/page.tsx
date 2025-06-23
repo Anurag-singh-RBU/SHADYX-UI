@@ -27,20 +27,7 @@ export default function Home() {
       <div className="relative overflow-hidden sm:min-h-full min-h-full px-4">
         <Spotlight/>
 
-        <div className="flex flex-col items-center justify-center sm:mt-40 mt-30 sm:-mb-2 -mb-8 space-y-6">
-          <div className="flex mb-6 sm:ml-3 sm:gap-10">
-            <a href="https://sourceforge.net/p/shadyxui/">
-            <img alt="Download SHADYX-UI" className="sm:py-2 py-2 mr-7 sm:mr-0 sm:w-[200px] w-[150px]" src="https://sourceforge.net/sflogo.php?type=17&amp;group_id=3887196"/>
-            </a>
-             <a
-            href="https://www.saashub.com/shadyx-ui?utm_source=badge&utm_campaign=badge&utm_content=shadyx-ui&badge_variant=color&badge_kind=approved"
-            target="_blank">
-            <img
-              src="https://cdn-b.saashub.com/img/badges/approved-color.png?v=1"
-              alt="Shadyx UI badge"
-              style={{maxWidth: "130px"}}/>
-          </a>
-          </div>         
+        <div className="flex flex-col items-center justify-center sm:mt-40 mt-30 sm:-mb-2 -mb-8 space-y-6">        
           <Introduction/>
         </div>
 
@@ -130,7 +117,23 @@ export default function Home() {
 
         <div className="text-center text-sm text-gray-700 mono-text mt-5">
           Current release&nbsp;
-          <span className="font-bold font-JB text-black">v1.0.0</span>
+          <span className="font-bold font-JB text-black">v1.0.1</span>
+        </div>
+        <div className="flex flex-col items-center justify-center sm:mt-20 mt-15 sm:-mb-2 -mb-8 space-y-6">
+          <span className="font-JB font-bold text-xl">Featured On</span>        
+          <div className="flex -mb-3 sm:ml-3 sm:gap-10">
+            <a href="https://sourceforge.net/p/shadyxui/">
+            <img alt="Download SHADYX-UI" className="sm:py-2 py-2 mr-7 sm:mr-0 sm:w-[200px] w-[150px]" src="https://sourceforge.net/sflogo.php?type=17&amp;group_id=3887196"/>
+            </a>
+             <a
+            href="https://www.saashub.com/shadyx-ui?utm_source=badge&utm_campaign=badge&utm_content=shadyx-ui&badge_variant=color&badge_kind=approved"
+            target="_blank">
+            <img
+              src="https://cdn-b.saashub.com/img/badges/approved-color.png?v=1"
+              alt="Shadyx UI badge"
+              style={{maxWidth: "130px"}}/>
+            </a>
+          </div> 
         </div>
 
         <Working/>
