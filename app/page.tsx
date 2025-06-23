@@ -28,9 +28,9 @@ export default function Home() {
         <Spotlight/>
 
         <div className="flex flex-col items-center justify-center sm:mt-40 mt-30 sm:-mb-2 -mb-8 space-y-6">
-          <div className="flex mb-6 sm:ml-3 sm:gap-6">
+          <div className="flex mb-6 sm:ml-3 sm:gap-10">
             <a href="https://sourceforge.net/p/shadyxui/">
-            <img alt="Download SHADYX-UI" className="sm:py-2 py-2 mr-5 sm:mr-0 sm:w-[200px] w-[150px]" src="https://sourceforge.net/sflogo.php?type=17&amp;group_id=3887196"/>
+            <img alt="Download SHADYX-UI" className="sm:py-2 py-2 mr-7 sm:mr-0 sm:w-[200px] w-[150px]" src="https://sourceforge.net/sflogo.php?type=17&amp;group_id=3887196"/>
             </a>
              <a
             href="https://www.saashub.com/shadyx-ui?utm_source=badge&utm_campaign=badge&utm_content=shadyx-ui&badge_variant=color&badge_kind=approved"
