@@ -27,7 +27,6 @@ export default function Home() {
       <div className="relative overflow-hidden sm:min-h-full min-h-full px-4">
         <Spotlight/>
 
-        
         <div className="flex flex-col items-center justify-center sm:mt-40 mt-30 sm:-mb-2 -mb-8 space-y-6">
           <div className="flex mb-6 sm:ml-3 sm:gap-6">
             <a href="https://sourceforge.net/p/shadyxui/">
