@@ -39,7 +39,7 @@ export default function Home() {
             <img
               src="https://cdn-b.saashub.com/img/badges/approved-color.png?v=1"
               alt="Shadyx UI badge"
-              style={{ maxWidth: "130px" }}/>
+              style={{maxWidth: "130px"}}/>
           </a>
           </div>         
           <Introduction/>
