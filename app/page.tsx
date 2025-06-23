@@ -26,9 +26,19 @@ export default function Home() {
 
       <div className="relative overflow-hidden sm:min-h-full min-h-full px-4">
         <Spotlight/>
+
         
-        <div className="sm:mt-40 mt-35 sm:-mb-5 -mb-8">
-          <Introduction></Introduction>
+        <div className="flex flex-col items-center justify-center sm:mt-40 mt-30 sm:-mb-5 -mb-8 space-y-6">
+          <a
+            href="https://www.saashub.com/shadyx-ui?utm_source=badge&utm_campaign=badge&utm_content=shadyx-ui&badge_variant=color&badge_kind=approved"
+            target="_blank">
+            <img
+              src="https://cdn-b.saashub.com/img/badges/approved-color.png?v=1"
+              alt="Shadyx UI badge"
+              style={{ maxWidth: "150px" }}/>
+          </a>
+          
+          <Introduction/>
         </div>
 
         <main className="relative z-10 flex flex-col justify-center items-center text-center px-4">
