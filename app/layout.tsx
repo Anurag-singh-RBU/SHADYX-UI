@@ -115,8 +115,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://shadyxui.in" />
-        {/* Agar future mein prerender links lagani ho toh yaha map karke add kar sakte ho */}
+        <link rel="canonical" href="https://shadyxui.in"/>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background font-sans`}
