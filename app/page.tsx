@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // import BehindTerminal from "./BehindTerminal";
 // import { SquigglyUnderline } from "./SquigglyUnderline";
+'use client'
 import Working from "./Working";
 import { ColorGroup } from "./components/ui/ColorGroup";
 import { Introduction } from "./components/ui/Introduction";
@@ -18,6 +19,8 @@ import clsx from "clsx";
 import { LineShadowTextDemo } from "./components/ui/LineShadowTextDemo";
 import Link from "next/link";
 
+import { useEffect } from "react";
+
 export default function Home() {
   const colorGroups = getColors();
 
@@ -27,7 +30,7 @@ export default function Home() {
       <div className="relative overflow-hidden sm:min-h-full min-h-full px-4">
         <Spotlight/>
 
-        <div className="flex flex-col items-center justify-center sm:mt-40 mt-30 sm:-mb-2 -mb-8 space-y-6">        
+        <div className="flex flex-col items-center justify-center sm:mt-40 mt-36 sm:-mb-2 -mb-8 space-y-6"> 
           <Introduction/>
         </div>
 
