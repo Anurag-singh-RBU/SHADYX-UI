@@ -30,7 +30,7 @@ export default function Home() {
       <div className="relative overflow-hidden sm:min-h-full min-h-full px-4">
         <Spotlight/>
 
-        <div className="flex flex-col items-center justify-center sm:mt-40 mt-36 sm:-mb-2 -mb-8 space-y-6"> 
+        <div className="flex flex-col items-center justify-center sm:mt-40 mt-38 sm:-mb-2 -mb-8 space-y-6"> 
           <Introduction/>
         </div>
 
