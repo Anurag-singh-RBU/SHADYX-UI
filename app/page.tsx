@@ -12,7 +12,6 @@ import { getColors } from "@/app/lib/colors"
 import { Button } from "@/components/ui/button";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import clsx from "clsx";
-import { LineShadowTextDemo } from "./components/ui/LineShadowTextDemo";
 import Link from "next/link";
 
 import { useEffect } from "react";
@@ -22,10 +21,8 @@ export default function Home() {
 
   return (
     <>
-
       <div className="relative overflow-hidden sm:min-h-full min-h-full px-4">
         <Spotlight/>
-
         <div className="flex flex-col items-center justify-center sm:mt-40 mt-38 sm:-mb-2 -mb-8 space-y-6"> 
           <Introduction/>
         </div>
