@@ -1,19 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// import BehindTerminal from "./BehindTerminal";
-// import { SquigglyUnderline } from "./SquigglyUnderline";
 'use client'
 import Working from "./Working";
 import { ColorGroup } from "./components/ui/ColorGroup";
 import { Introduction } from "./components/ui/Introduction";
-// import Footerdemo from "./components/ui/Footerdemo";
-// import CPnAll from "./components/ui/CPnAll";
 import ReadDocs from "./components/ui/ReadDocs";
 import { TerminalDemo } from "./components/ui/TerminalDemo";
 import { Cover } from "./components/ui/cover";
 import { Spotlight } from "./components/ui/spotlight-new";
 import { getColors } from "@/app/lib/colors"
-import { Button } from "@/components/ui/button"; // agar tu shadcn use kar raha hai
+import { Button } from "@/components/ui/button";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import clsx from "clsx";
 import { LineShadowTextDemo } from "./components/ui/LineShadowTextDemo";
@@ -118,7 +114,7 @@ export default function Home() {
           </div>
         </main>
 
-        <div className="text-center text-sm text-gray-700 mono-text mt-5">
+        <div className="text-center text-sm text-gray-700 mono-text mt-5">-
           Current release&nbsp;
           <span className="font-bold font-JB text-black">v1.0.1</span>
         </div>
