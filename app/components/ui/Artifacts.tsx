@@ -73,7 +73,7 @@ const Artifacts = () => {
           <div id="paraSeven"/>
         </div>
         <h1 className="text-center text-xl mt-6 font-bold">Pricing Section</h1>
-        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium sm:-mb-18">
+        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium sm:mb-0 -mb-18">
           Retro Style Pricing Section
         </h4>
       </Link>
