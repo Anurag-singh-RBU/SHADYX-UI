@@ -67,6 +67,16 @@ const Artifacts = () => {
           Navigation That Adapts to You
         </h4>
       </Link>
+
+      <Link href="/pricingcomponent" className="flex flex-col cursor-pointer">
+        <div className="bg-[rgb(245,245,244)] rounded-2xl overflow-hidden py-3">
+          <div id="paraSeven"/>
+        </div>
+        <h1 className="text-center text-xl mt-6 font-bold">Pricing Section</h1>
+        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium">
+          Retro Style Pricing Section
+        </h4>
+      </Link>
     </div>
   );
 };

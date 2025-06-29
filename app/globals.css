@@ -329,7 +329,8 @@ body {
 #paraThree,
 #paraFour,
 #paraFive,
-#paraSix {
+#paraSix,
+#paraSeven {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -367,13 +368,19 @@ body {
   background-image: url("navbar.png");
 }
 
+#paraSeven {
+  background-color: rgb(245,245,244);
+  background-image: url("pricingimg.png");
+}
+
 @media (max-width: 640px) {
   #para,
   #paraTwo,
   #paraThree,
   #paraFour,
   #paraFive,
-  #paraSix {
+  #paraSix,
+  #paraSeven {
     width: 100%;
     max-width: 350px;
     height: 200px;
