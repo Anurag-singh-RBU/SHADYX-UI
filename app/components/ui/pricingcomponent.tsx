@@ -383,7 +383,7 @@ export const Pricing = ({ title = "Pricing Plans", plans, className = "" }: Pric
       {/* Content Switcher */}
       <div className="sm:mt-10 mt-5 min-h-[400px] relative">
         {activeTab === 'preview' ? (
-          <div className="relative rounded-md sm:h-[800px] h-auto w-full">
+          <div className="relative rounded-md md:h-auto sm:h-[800px] h-auto w-full">
             <Pricing title="Choose Your Perfect Plan" plans={DEMO_PLANS}></Pricing>
           </div>
         ) : (
