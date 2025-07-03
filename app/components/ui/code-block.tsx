@@ -111,8 +111,7 @@ export const CodeBlock = ({
       paddingLeft: "0", // Remove extra left padding
     },
   })}
-  PreTag="div"
->
+  PreTag="div">
   {String(activeCode)}
 </SyntaxHighlighter>
 

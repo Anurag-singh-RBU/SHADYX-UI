@@ -39,12 +39,11 @@ const CodeBlock = ({ code, fileName, language = 'javascript', className = '' }: 
             variant="ghost"
             size="sm"
             onClick={copyToClipboard}
-            className="text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-          >
+            className="text-gray-600 hover:text-gray-900 hover:bg-gray-100">
             {copied ? (
-              <Check className="w-4 h-4" />
+              <Check className="w-4 h-4"/>
             ) : (
-              <Copy className="w-4 h-4" />
+              <Copy className="w-4 h-4"/>
             )}
           </Button>
         </div>
