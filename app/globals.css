@@ -440,3 +440,12 @@ body {
   color: rgb(103,159,140) !important; /* greenish */
   background-color: transparent !important;
 }
+
+@keyframes sway {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

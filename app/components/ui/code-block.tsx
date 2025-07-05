@@ -113,7 +113,7 @@ export const CodeBlock = ({
   })}
   PreTag="div">
   {String(activeCode)}
-</SyntaxHighlighter>
+  </SyntaxHighlighter>
 
     </div>
   );
