@@ -141,7 +141,7 @@ const Counter = ({ from, to }: { from: number; to: number }) => {
     });
     return () => controls.stop();
   }, [from, to]);
-  return <span ref={nodeRef} />;
+  return <span ref={nodeRef}/>;
 };
 
 const PricingHeader = ({ title }: { title: string }) => (
@@ -166,7 +166,7 @@ const PricingToggle = ({ isYearly, onToggle }: { isYearly: boolean; onToggle: ()
     <motion.button className="w-16 h-8 flex items-center bg-gray-200 rounded-full 
     p-1 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)]" onClick={onToggle}>
       <motion.div className="w-6 h-6 bg-white rounded-full border-2 
-      border-black" animate={{ x: isYearly ? 32 : 0 }} />
+      border-black" animate={{ x: isYearly ? 32 : 0 }}/>
     </motion.button>
     <span className={\`text-gray-600 font-medium \${isYearly ? 
     "text-black" : ""}\`}>Yearly</span>
@@ -288,7 +288,7 @@ const PricingCard = ({ plan, isYearly, index }:
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1 }}
-            whileHover={{ x: 5, scale: 1.02, transition: { type: "spring", stiffness: 400 } }}
+            whileHover={{ x: 5, scale: 1.02, transition: { type: "spring", stiffness: 400 }}}
             className="flex items-center gap-2 p-2 bg-gray-50 rounded-md border-2
             border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)]">
             <motion.span
@@ -306,7 +306,7 @@ const PricingCard = ({ plan, isYearly, index }:
         border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] 
         active:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] transition-all duration-200\`, plan.accent)}
         whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-        whileTap={{ scale: 0.95, rotate: [-1, 1, 0] }}>
+        whileTap={{ scale: 0.95, rotate: [-1, 1, 0]}}>
         GET STARTED
       </motion.button>
     </motion.div>

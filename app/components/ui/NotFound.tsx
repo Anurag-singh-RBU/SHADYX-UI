@@ -22,14 +22,13 @@ export function NotFound() {
                 Look like you&apos;re lost
               </h3>
               <p className="mb-6 text-black sm:mb-5">
-                The page you are looking for is not available!
+                The page you are looking for is not available !
               </p>
 
               <Button
                 variant="default"
                 onClick={() => router.push("/")}
-                className="my-5 bg-green-600 hover:bg-green-700 "
-              >
+                className="my-5 bg-green-600 hover:bg-green-700 ">
                 Go to Home
               </Button>
             </div>

@@ -15,8 +15,6 @@ import clsx from "clsx";
 import Link from "next/link";
 
 import { useEffect } from "react";
-import { Pricing } from "./components/ui/pricing";
-import { NotFound } from "./components/ui/NotFound";
 
 export default function Home() {
 
@@ -54,7 +52,7 @@ export default function Home() {
           <div className="flex justify-center h-[80px] sm:mt-10 mt-7 w-full">
             <div className="h-full flex justify-evenly sm:pl-0 pl-4 items-center w-[600px]">
               <span className="h-full w-20 flex items-center justify-center">
-                <img src="https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/b8ccc46db9f441d6bf3976a402faad5a" alt="Next.js" className="sm:ml-0 mr-3 sm:h-15 sm:w-15 h-12 w-12" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/b8ccc46db9f441d6bf3976a402faad5a" alt="Next.js" className="sm:ml-0 mr-3 sm:h-13 sm:w-13 h-10 w-10" />
               </span>
               <span className="h-full w-20 flex items-center justify-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" className="h-10 w-10 sm:ml-0 mr-2 sm:h-12 sm:w-12" />
@@ -184,10 +182,6 @@ export default function Home() {
               </p>
             </section>
         </div>
-
-        {/* <div className="w-full">
-        <NotFound/>
-        </div> */}
 
       </div>
     </>

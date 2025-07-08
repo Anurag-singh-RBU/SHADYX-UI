@@ -330,7 +330,9 @@ body {
 #paraFour,
 #paraFive,
 #paraSix,
-#paraSeven {
+#paraSeven,
+#paraEight,
+#paraNine {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -364,13 +366,24 @@ body {
 }
 
 #paraSix {
-  background-color: rgb(216,231,251);
+  background-color: rgb(217,232,252);
   background-image: url("navbar.png");
 }
 
 #paraSeven {
   background-color: rgb(245,245,244);
   background-image: url("pricingimg.png");
+}
+
+#paraEight {
+  background-color: white;
+  background-image: url("error.png");
+  border: 1px solid rgba(0, 0, 0, 0.266);
+}
+
+#paraNine {
+  background-color: rgb(219,234,254);
+  background-image: url("review.png");
 }
 
 @media (max-width: 640px) {
@@ -380,7 +393,9 @@ body {
   #paraFour,
   #paraFive,
   #paraSix,
-  #paraSeven {
+  #paraSeven,
+  #paraEight,
+  #paraNine {
     width: 100%;
     max-width: 350px;
     height: 200px;

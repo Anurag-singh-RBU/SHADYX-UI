@@ -59,7 +59,7 @@ const Artifacts = () => {
       </Link>
 
       <Link href="/navbarcomponent" className="flex flex-col cursor-pointer">
-        <div className="bg-[rgb(216,231,251)] rounded-2xl overflow-hidden py-3">
+        <div className="bg-[rgb(217,232,252)] rounded-2xl overflow-hidden py-3">
           <div id="paraSix"/>
         </div>
         <h1 className="text-center text-xl mt-6 font-bold">Resizable Navbar</h1>
@@ -77,6 +77,27 @@ const Artifacts = () => {
           Retro Style Pricing Section
         </h4>
       </Link>
+
+      <Link href="/errorcomponent" className="flex sm:mt-0 mt-18 flex-col cursor-pointer">
+        <div className="bg-black rounded-2xl overflow-hidden py-3">
+          <div id="paraEight"/>
+        </div>
+        <h1 className="text-center text-xl mt-6 font-bold">Page Not Found</h1>
+        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium sm:mb-0 -mb-18">
+          Eye Catchy Error Page
+        </h4>
+      </Link>
+
+      <Link href="/reviewcomponent" className="flex sm:mt-0 mt-18 flex-col cursor-pointer">
+        <div className="bg-[rgb(219,234,254)] rounded-2xl overflow-hidden py-3">
+          <div id="paraNine"/>
+        </div>
+        <h1 className="text-center text-xl mt-6 font-bold">Reviews Section</h1>
+        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium sm:mb-0 -mb-18">
+          Sleek Showcasing of Reviews
+        </h4>
+      </Link>
+
     </div>
   );
 };
