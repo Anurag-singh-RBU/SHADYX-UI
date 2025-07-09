@@ -427,12 +427,12 @@ export const Pricing = ({ title = "Pricing Plans", plans, className = "" }: Pric
           </div>
       </div>
 
-      <p className='sm:ml-1 mt-30 text-xl font-bold flex'>Credits : 
+      <p className='sm:ml-1 mt-30 text-md font-bold flex'>Credits : 
       <Avatar>
-      <AvatarImage src="./am.avif" alt="@shadcn" />
+      <AvatarImage src="./am.avif" alt="@shadcn"/>
       <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-      <span className='ml-2 text-blue-600'>Anurag Mishra</span>
+      <span className='ml-2 mt-0.3 text-blue-600'>Anurag Mishra</span>
       </p>
 
     </div>
