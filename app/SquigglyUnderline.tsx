@@ -1,11 +1,11 @@
-
 "use client";
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {Menu, X, Linkedin, Twitter, ChevronRight} from "lucide-react";
+import {Menu, X, Linkedin, Twitter, ChevronRight, Palette, Download} from "lucide-react";
 import { usePathname } from "next/navigation";
+import { Button } from "./components/ui/buttontop";
 
 type NavItem = {
   name: string;
@@ -243,17 +243,35 @@ export const SquigglyUnderline = () => {
         </nav>
 
         {/* Right: CTA & Socials (Desktop only) */}
-        <div className="hidden lg:flex items-center space-x-8">
-          <a
-            href="/about"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex font-semibold items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-800 shadow-sm transition hover:bg-gray-100"
-          >
-            Introduction
-    <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-
-          </a>
+        <div className="hidden lg:flex font-GS items-center space-x-8">
+          <div className="inline-flex -space-x-px rounded-lg shadow-sm shadow-black/5 rtl:space-x-reverse">
+      <Button
+        className="rounded-none shadow-none first:rounded-s-lg cursor-pointer last:rounded-e-lg focus-visible:z-10"
+        variant="outline"
+      >
+        <Download className="-ms-1 me-2 opacity-60" size={16} strokeWidth={2} aria-hidden="true"/>
+        <a href="https://ui.shadcn.com/docs/installation/vite">Shadcn</a>
+      </Button>
+      <Button
+        className="rounded-none shadow-none first:rounded-s-lg cursor-pointer last:rounded-e-lg focus-visible:z-10"
+        variant="outline"
+      >
+        <Palette className="-ms-1 me-2 opacity-60" size={16} strokeWidth={2} aria-hidden="true"/>
+        <a href="/colors">Colors</a>
+      </Button>
+      <Button
+        className="rounded-none cursor-pointer shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10"
+        variant="outline"
+        size="icon"
+        aria-label="Menu"
+      ><Link
+        href="/about"
+        className="inline-flex items-center justify-center px-3 py-2 hover:bg-gray-100 text-gray-800"
+      >
+        <ChevronRight className="h-4 w-4" />
+      </Link>
+      </Button>
+    </div>
 
           {/* Social Icons */}
           <div className="flex items-center space-x-3">
