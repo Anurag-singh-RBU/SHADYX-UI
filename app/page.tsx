@@ -11,7 +11,6 @@ import { Spotlight } from "./components/ui/spotlight-new";
 import { getColors } from "@/app/lib/colors"
 import { Button } from "@/components/ui/button";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
-import clsx from "clsx";
 import Link from "next/link";
 
 import { useEffect } from "react";
