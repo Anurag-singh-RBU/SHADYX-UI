@@ -1,6 +1,6 @@
 {
   "name": "@anuragcodes/shadyx",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "CLI to install Shadyx UI components via JSON",
   "type": "module",
