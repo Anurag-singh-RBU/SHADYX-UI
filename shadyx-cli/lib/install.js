@@ -30,6 +30,6 @@ export default async function installComponent(jsonUrl) {
 
     console.log(`🎉 ${data.name} component installed successfully !`);
   } catch (err) {
-    console.error("❌ Failed to install component :", err.message);
+    console.error("❌ Failed installation :", err.message);
   }
 }
