@@ -17,14 +17,14 @@ export default async function installComponent(jsonUrl) {
     const data = await res.json();
 
     for (const file of data.files) {
-      const filePath = path.join(process.cwd(), file.name);
+      const filePath = path.join(process.cwd(), file.path); 
       await mkdir(path.dirname(filePath), { recursive: true });
       await writeFile(filePath, file.content, "utf8");
-      console.log(`✅ Created ${file.name}`);
+      console.log(`✅ Created ${file.path}`);
     }
 
-    console.log(`🎉 ${data.name} component installed successfully!`);
+    console.log(`🎉 ${data.name} component installed successfully !`);
   } catch (err) {
-    console.error("❌ Failed to install component:", err.message);
+    console.error("❌ Failed to install component :", err.message);
   }
 }
