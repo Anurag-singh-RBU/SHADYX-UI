@@ -17,7 +17,12 @@ export default async function installComponent(jsonUrl) {
     const data = await res.json();
 
     for (const file of data.files) {
-      const filePath = path.join(process.cwd(), file.path); 
+      console.log("file object :", file); // 👈 debugging
+      if (!file.path || !file.content) {
+        throw new Error("Each file must have a 'path' and 'content'.");
+      }
+
+      const filePath = path.join(process.cwd(), file.path);
       await mkdir(path.dirname(filePath), { recursive: true });
       await writeFile(filePath, file.content, "utf8");
       console.log(`✅ Created ${file.path}`);
