@@ -17,9 +17,10 @@ export default async function installComponent(jsonUrl) {
     const data = await res.json();
 
     for (const file of data.files) {
-      console.log("file object :", file); // 👈 debugging
       if (!file.path || !file.content) {
+
         throw new Error("Each file must have a 'path' and 'content'.");
+        
       }
 
       const filePath = path.join(process.cwd(), file.path);
