@@ -9,6 +9,9 @@
     "lint": "next lint",
     "postbuild": "next-sitemap"
   },
+  "bin": {
+    "shadyx": "./bin/index.js"
+  },
   "dependencies": {
     "@clerk/nextjs": "^6.20.0",
     "@radix-ui/react-label": "^2.1.7",
