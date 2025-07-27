@@ -67,20 +67,22 @@ const CliOutput: React.FC<CliOutputProps> = ({ commands }) => {
         ))}
       </div>
 
-      <div className="flex items-start justify-between px-4 py-8 bg-white text-sm font-JB text-gray-800 overflow-x-auto hide-scrollbar-mobile">
-        <code className="whitespace-pre-wrap">
-            {highlightCliWords(commands[selected] || '')}
+    <div className="flex items-start justify-between px-4 py-8 bg-white text-sm font-JB text-gray-800">
+    <div className="overflow-x-auto hide-scrollbar-mobile max-w-full">
+        <code className="whitespace-nowrap block min-w-max">
+        {highlightCliWords(commands[selected] || '')}
         </code>
-        <button
-            onClick={handleCopy}
-            className="ml-4 text-gray-400 hover:text-gray-600 transition cursor-pointer">
-            {copied ? (
-            <Check className="w-5 h-5 text-green-500" />
-            ) : (
-            <Copy className="w-5 h-5" />
-            )}
-        </button>
-        </div>
+    </div>
+    <button
+        onClick={handleCopy}
+        className="ml-4 flex-shrink-0 text-gray-400 hover:text-gray-600 transition cursor-pointer">
+        {copied ? (
+        <Check className="w-5 h-5 text-green-500" />
+        ) : (
+        <Copy className="w-5 h-5" />
+        )}
+    </button>
+    </div>
 
     </div>
   );
