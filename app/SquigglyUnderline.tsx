@@ -52,7 +52,7 @@ export const SquigglyUnderline = () => {
   return (
     <>
     <Link href="/errorcomponent" className="w-auto h-auto cursor-pointer">
-    <div className="w-full sm:h-[48px] h-[45] font-JB font-medium bg-gradient-to-b from-blue-400 to-blue-500 px-2 py-2 text-left font-sans text-xs text-white sm:px-4 sm:py-3 sm:text-base md:text-center">
+    <div className="w-full h-[48px] font-JB font-medium bg-gradient-to-b from-blue-400 to-blue-500 px-2 py-2 text-left font-sans text-xs text-white sm:px-4 sm:py-3 sm:text-base md:text-center">
       Introducing <span className="rounded-sm px-1 py-1 font-bold">Shadyx CLI - </span>
     <span className="font-GS">Effortlessly add ready made <span className="font-JB">UI</span> blocks to your project in seconds</span>
     </div>
