@@ -54,7 +54,7 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative w-full rounded-lg bg-black p-4 font-mono text-sm">
+    <div className="relative w-full rounded-lg bg-black p-4 font-mono text-sm hide-scrollbar-mobile">
       <div className="flex flex-col gap-2">
         {tabsExist && (
           <div className="flex overflow-x-auto whitespace-nowrap scrollbar-hide min-w-0">
@@ -74,46 +74,49 @@ export const CodeBlock = ({
           </div>
         )}
         {!tabsExist && filename && (
-          <div className="flex justify-between items-center -mt-2 py-2">
+          <div className="flex justify-between items-center -mt-2 py-2 hide-scrollbar-mobile">
             <div className="text-xs text-zinc-400">{filename}</div>
             <button
               onClick={copyToClipboard}
               className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans"
             >
-              {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
+              {copied ? <IconCheck size={14} /> : <IconCopy size={14}/>}
             </button>
           </div>
         )}
       </div>
-      <SyntaxHighlighter
-  language={activeLanguage}
-  style={atomDark}
-  customStyle={{
-    margin: 0,
-    padding: 0,
-    background: "transparent",
-    fontSize: "0.875rem",
-  }}
-  showLineNumbers={true}
-  wrapLines={true}
-  lineNumberStyle={{
-    minWidth: "1.5rem", // tighter width
-    marginRight: "0.5rem", // reduce space between number and code
-    color: "#888",
-  }}
-  lineProps={(lineNumber) => ({
-    style: {
-      backgroundColor: activeHighlightLines.includes(lineNumber)
-        ? "rgba(255,255,255,0.1)"
-        : "transparent",
-      display: "block",
-      width: "100%",
-      paddingLeft: "0", // Remove extra left padding
-    },
-  })}
-  PreTag="div">
-  {String(activeCode)}
-  </SyntaxHighlighter>
+      <div className="overflow-x-auto hide-scrollbar-mobile">
+        <SyntaxHighlighter
+          language={activeLanguage}
+          style={atomDark}
+          customStyle={{
+            margin: 0,
+            padding: 0,
+            background: "transparent",
+            fontSize: "0.875rem",
+          }}
+          showLineNumbers={true}
+          wrapLines={true}
+          lineNumberStyle={{
+            minWidth: "1.5rem",
+            marginRight: "0.5rem",
+            color: "#888",
+          }}
+          lineProps={(lineNumber) => ({
+            style: {
+              backgroundColor: activeHighlightLines.includes(lineNumber)
+                ? "rgba(255,255,255,0.1)"
+                : "transparent",
+              display: "block",
+              width: "100%",
+              paddingLeft: "0",
+            },
+          })}
+          PreTag="div"
+        >
+          {String(activeCode)}
+        </SyntaxHighlighter>
+      </div>
 
     </div>
   );

@@ -143,7 +143,7 @@ export default EarthCanvas;
             <EarthCanvas/>
           </div>
         ) : (
-          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-xl border border-gray-200">
+          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-xl border border-gray-200 hide-scrollbar-mobile overflow-hidden">
             <CodeBlock
               language="javascript"
               fileName="EarthCanvas.jsx"

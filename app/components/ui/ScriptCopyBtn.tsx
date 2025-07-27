@@ -46,7 +46,7 @@ export function ScriptCopyBtn({
       {showMultiplePackageOptions && (
         <div className="mb-2 flex items-center justify-between">
           <div className="relative">
-            <div className="inline-flex overflow-hidden rounded-md border border-gray-300 text-xs bg-white">
+            <div className="inline-flex overflow-x-auto overflow-hidden rounded-md border border-gray-300 text-xs bg-white hide-scrollbar-mobile">
               {packageManagers.map((pm, index) => (
                 <div key={pm} className="flex items-center">
                   {index > 0 && (

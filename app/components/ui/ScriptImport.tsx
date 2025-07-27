@@ -39,7 +39,7 @@ export function ScriptImport({
   return (
   <div className={cn("flex mx-0 sm:mx-1 mb-10 w-full items-center justify-start gap-2", className)}>
     {/* Command Box with scrollable text */}
-    <div className="flex-1 rounded-lg bg-[#1E1E2F] px-4 h-10 flex items-center overflow-x-auto whitespace-nowrap font-mono text-sm">
+    <div className="flex-1 rounded-lg bg-[#1E1E2F] px-4 h-10 flex items-center overflow-x-auto whitespace-nowrap font-mono text-sm hide-scrollbar-mobile">
       {renderColoredCommand(command)}
     </div>
 

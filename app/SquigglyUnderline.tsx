@@ -24,6 +24,16 @@ export const SquigglyUnderline = () => {
   const pathname = usePathname();
   const [selectedLink, setSelectedLink] = useState("Home");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10); 
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     if (pathname === "/") {
@@ -40,8 +50,16 @@ export const SquigglyUnderline = () => {
   }, [pathname]);
 
   return (
-    // Added fixed, top-0, left-0, w-full, and z-50
-    <header className="fixed top-0 left-0 w-full z-50 border-b border-gray-200 bg-white px-6 py-4 font-mono font-bold" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+    <>
+    <Link href="/errorcomponent" className="w-auto h-auto cursor-pointer">
+    <div className="w-full sm:h-[48px] h-[45] font-JB font-medium bg-gradient-to-b from-blue-400 to-blue-500 px-2 py-2 text-left font-sans text-xs text-white sm:px-4 sm:py-3 sm:text-base md:text-center">
+      Introducing <span className="rounded-sm px-1 py-1 font-bold">Shadyx CLI - </span>
+    <span className="font-GS">Effortlessly add ready made <span className="font-JB">UI</span> blocks to your project in seconds</span>
+    </div>
+    </Link>
+    <header className={`fixed left-0 w-full z-50 border-b border-gray-200 bg-white px-6 py-4 font-mono font-bold transition-all duration-300 ${
+      scrolled ? 'top-0' : ''
+      }`} style={{ fontFamily: "'JetBrains Mono', monospace" }}>
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Left: Logo */}
         <div className="flex items-center space-x-3 text-xl">
@@ -359,8 +377,9 @@ export const SquigglyUnderline = () => {
       </div>
     </div>
   )}
-</AnimatePresence>
+  </AnimatePresence>
 
     </header>
+  </>
   );
 };

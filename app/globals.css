@@ -8,6 +8,20 @@
 
 }
 
+@media (max-width: 640px) {
+  .hide-scrollbar-mobile {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar-mobile::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+
 code, pre, .mono-text {
   font-family: 'Geist Mono', monospace;
 }

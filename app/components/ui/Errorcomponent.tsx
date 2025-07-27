@@ -1,15 +1,16 @@
 'use client';
 import React, {useState} from 'react';
-import { Monitor, FileCode } from 'lucide-react';
+import { Monitor, FileCode, Command } from 'lucide-react';
 import CodeBlock from './CodeBlock';
 import {ScriptCopyBtn} from './ScriptCopyBtn';
 import { ScriptImport } from './ScriptImport';
 import { NotFound } from './NotFound';
 import { Avatar, AvatarFallback, AvatarImage } from './avatar';
+import CliOutput from './CliOutput';
 
 const Spotlight: React.FC = () => {
 
-const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview');
+const [activeTab, setActiveTab] = useState<'preview' | 'code' | 'cli'>('preview');
 const codeString = `import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -53,15 +54,12 @@ export const NotFound: React.FC = () => {
 
 return (
     <div className="w-auto sm:mt-35 mt-33 sm:ml-32 ml-8 sm:mr-25 mr-8 relative">
-      {/* Heading */}
       <h1 className="text-4xl font-bold text-gray-900 mb-3 mono-text">Error Page</h1>
 
-      {/* Subheading */}
       <p className="sm:text-md text-sm text-gray-600 mb-4 mono-text text-justify">
         Where have you gone ? We&apos;ve been searching for you — come back soon.
       </p>
 
-      {/* Tags */}
       <div className="flex flex-wrap sm:gap-2 gap-3 -ml-2 mb-6 font-JB">
         {['Error', '404', 'Funny'].map((tag, index) => (
           <div key={tag} className={`relative sm:ml-0 ml-1 rounded-full p-[2px] tag-wrapper tag-${index}`}>
@@ -72,73 +70,87 @@ return (
         ))}
       </div>
 
-
-      {/* Toggle Buttons */}
       <div className="flex gap-4 sm:mt-20 mt-15">
         <button
           onClick={() => setActiveTab('preview')}
-          className={`flex items-center gap-2 px-5 py-2 rounded-md shadow-sm ${
+          className={`flex items-center sm:text-md text-sm gap-2 sm:px-5 sm:py-2 py-2 px-3 rounded-md ${
             activeTab === 'preview'
               ? 'bg-gray-900 text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-          }`}
-        >
-          <Monitor className="w-4 h-4" />
+          }`}>
+          <Monitor className="w-4 h-4"/>
           <span className="font-medium">Preview</span>
         </button>
 
         <button
           onClick={() => setActiveTab('code')}
-          className={`flex items-center gap-2 px-5 py-2 rounded-md ${
+          className={`flex items-center sm:text-md text-sm gap-2 sm:px-5 sm:py-2 py-2 px-3 rounded-md ${
             activeTab === 'code'
               ? 'bg-gray-900 text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-          }`}
-        >
-          <FileCode className="w-4 h-4" />
+          }`}>
+          <FileCode className="w-4 h-4"/>
           <span className="font-medium">Code</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('cli')}
+          className={`flex items-center gap-2 sm:text-md text-sm font-JB sm:px-5 sm:py-2 py-2 px-3 rounded-md ${
+            activeTab === 'cli'
+              ? 'bg-gray-900 text-white'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+          }`}>
+          <Command className="w-4 h-4"/>
+          <span className="font-medium">CLI</span>
         </button>
       </div>
 
-      {/* Content Switcher */}
       <div className="sm:mt-10 rounded-md mt-5 min-h-[400px] -mb-25 sm:mb-0 relative">
         {activeTab === 'preview' ? (
           <div className="relative rounded-md border-1 py-5 sm:px-0 px-3 border-gray-300">
-                <NotFound/>
-            </div>
-        ) : (
-          <div className="sm:h-[500px] h-[500px] overflow-y-auto font-JB rounded-xl border border-gray-200 overflow-hidden">
+            <NotFound/>
+          </div>
+        ) : activeTab === 'code' ? (
+          <div className="h-[500px] overflow-y-auto font-JB rounded-xl border border-gray-200 overflow-hidden hide-scrollbar-mobile">
             <CodeBlock
               language="typescript"
               fileName="NotFound.tsx"
-              code={codeString}
-            />
+              code={codeString}/>
+          </div>
+        ) : (
+          <div className="h-auto overflow-x-auto overflow-hidden">
+            <CliOutput
+              commands={{
+                npm: 'npx @anuragcodes/shadyx add https://shadyxui.in/r/not-found.json',
+                pnpm: 'pnpm dlx @anuragcodes/shadyx add https://shadyxui.in/r/not-found.json',
+                yarn: 'yarn dlx @anuragcodes/shadyx add https://shadyxui.in/r/not-found.json',
+                bun: 'bunx @anuragcodes/shadyx add https://shadyxui.in/r/not-found.json',
+              }}/>
           </div>
         )}
       </div>
 
     <div className="sm:px-32 sm:pt-10 pb-10 font-JB">
-      <h2 className="text-3xl font-bold mb-6 sm:ml-1 sm:mt-25 mt-42">Installation</h2>
+      <h2 className={`text-3xl font-bold mb-6 sm:ml-1 ${activeTab === "preview" || activeTab === "code" ? "sm:mt-25 mt-42" : "sm:-mt-46 -mt-45"}`}>
+        Installation
+      </h2>
 
-      {/* Tabs */}
       <div className="flex items-center border-b border-gray-300 mb-6 text-sm">
         <h3 className="text-base sm:font-semibold font-bold mb-2 sm:ml-2">Install Dependencies</h3>
       </div>
 
-      {/* Install Dependencies */}
       <ScriptCopyBtn
         commandMap={{
           npm: "npm install react-router-dom",
           yarn: "yarn add react-router-dom",
           pnpm: "pnpm add react-router-dom",
           bun: "bun add react-router-dom",
-        }}
-      />
-      {/* Add util file */}
+        }}/>
+
       <div className="relative -mb-15">
         <h3 className="text-base sm:font-semibold font-bold mb-2 sm:ml-2">Update App file</h3>
         <p className="text-sm text-muted-foreground mb-2 sm:ml-2">App.jsx</p>
-         <ScriptImport command="<NotFound/>" />
+         <ScriptImport command="<NotFound/>"/>
       </div>
         <p className='sm:ml-1 mt-30 text-xl font-bold flex'>Credits : 
             <Avatar>

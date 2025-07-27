@@ -75,7 +75,7 @@ const ReviewRating: React.FC<ReviewRatingProps> = ({ reviews, className = '' }) 
   };
 
   return (
-    <Card className={`w-full max-w-4xl mx-auto shadow-md border border-border rounded-2xl ${className}`}>
+    <Card className={`w-full max-w-4xl mx-auto shadow-md hide-scrollbar-mobile border border-border rounded-2xl ${className}`}>
       <CardContent className="p-6 font-mono">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center space-x-3">
@@ -106,7 +106,7 @@ const ReviewRating: React.FC<ReviewRatingProps> = ({ reviews, className = '' }) 
 
         {/* Filter buttons */}
         <div className="mb-6">
-          <div className="flex sm:flex-wrap gap-2 overflow-x-auto whitespace-nowrap pb-1">
+          <div className="flex sm:flex-wrap gap-2 overflow-x-auto whitespace-nowrap pb-1 hide-scrollbar-mobile">
             <button
                 onClick={() => handleFilterChange('all')}
                 className={`sm:px-4 px-2 py-2 rounded-lg sm:text-sm text-xs font-medium transition-all 
@@ -137,7 +137,7 @@ const ReviewRating: React.FC<ReviewRatingProps> = ({ reviews, className = '' }) 
         </div>
 
         {/* Reviews list */}
-        <div className="space-y-3 max-h-64 overflow-y-auto">
+        <div className="space-y-3 max-h-64 overflow-y-auto hide-scrollbar-mobile">
           {displayedReviews.length > 0 ? (
             displayedReviews.map((review, index) => (
               <Card

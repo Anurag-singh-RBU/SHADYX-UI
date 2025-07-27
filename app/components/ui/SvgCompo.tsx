@@ -250,7 +250,7 @@ export default SvgMaskHero;
             <SvgMaskHero></SvgMaskHero>
           </div>
         ) : (
-          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-xl border border-gray-200 overflow-hidden">
+          <div className="sm:h-[500px] h-[300px] overflow-y-auto font-JB rounded-xl border border-gray-200 overflow-hidden hide-scrollbar-mobile">
             <CodeBlock
               language="typescript"
               fileName="SvgMaskHero.tsx"

@@ -340,7 +340,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({ color, onChange }) => 
             <PaintBoard></PaintBoard>
           </div>
         ) : (
-         <div className="sm:h-[500px] h-[300px] rounded-xl sm:ml-10 sm:mr-3 overflow-y-auto font-JB border border-gray-200 overflow-hidden">
+         <div className="sm:h-[500px] h-[300px] rounded-xl sm:ml-10 sm:mr-3 overflow-y-auto font-JB border border-gray-200 overflow-hidden hide-scrollbar-mobile">
           <CodeBlock
             code={codeString} 
             fileName="PaintBoard.tsx" 

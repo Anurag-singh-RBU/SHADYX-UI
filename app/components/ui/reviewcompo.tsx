@@ -379,7 +379,7 @@ return(
             <ReviewRating reviews={demoReviews} rating={avgRating}/>
           </div>
         ) : (
-          <div className="sm:h-[500px] h-[500px] overflow-y-auto font-JB rounded-xl border border-gray-200">
+          <div className="sm:h-[500px] h-[500px] overflow-y-auto font-JB rounded-xl border border-gray-200 hide-scrollbar-mobile overflow-hidden">
             <CodeBlock
               language="typescript"
               fileName="ReviewRating.tsx"
@@ -410,7 +410,7 @@ return(
       {/* Add util file */}
       <div className="relative -mb-15">
         <h3 className="text-base sm:font-semibold font-bold mb-2 sm:ml-2">Usage</h3>
-          <div className="sm:h-[500px] h-[300px] mb-10 overflow-y-auto font-JB rounded-xl border border-gray-200">
+          <div className="sm:h-[500px] h-[300px] mb-10 overflow-y-auto font-JB rounded-xl border border-gray-200 hide-scrollbar-mobile">
             <CodeBlock
               language="typescript"
               fileName="App.tsx"

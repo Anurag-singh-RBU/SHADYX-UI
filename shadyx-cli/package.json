@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/anuragcodes/shadyx-cli.git"
+    "url": "https://github.com/Anurag-singh-RBU/SHADYX-UI.git"
   },
   "dependencies": {
     "node-fetch": "^3.3.2"
