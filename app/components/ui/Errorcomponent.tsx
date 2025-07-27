@@ -110,7 +110,7 @@ return (
           <div className="sm:h-[500px] h-[500px] overflow-y-auto font-JB rounded-xl border border-gray-200 overflow-hidden">
             <CodeBlock
               language="typescript"
-              fileName="ResizableNavbar.tsx"
+              fileName="NotFound.tsx"
               code={codeString}
             />
           </div>
