@@ -32,7 +32,7 @@ export default function Home() {
           <div className="sm:mt-15 mt-15">
             <div
               id="spacing"
-              className="text-3xl sm:text-7xl text-shadow-lg text-nowrap font-JB font-extrabold mb-3 sm:mb-5 text-gray-800 whitespace-nowrap sm:whitespace-nowrap text-center px-4">
+              className="text-3xl sm:text-7xl text-shadow-md sm:text-shadow-lg text-nowrap font-JB font-extrabold mb-3 sm:mb-5 text-gray-800 whitespace-nowrap sm:whitespace-nowrap text-center px-4">
               Shortcut to Stunning
             </div>
 
