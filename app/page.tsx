@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
+import React from "react";
 import Working from "./Working";
 import { ColorGroup } from "./components/ui/ColorGroup";
 import { Introduction } from "./components/ui/Introduction";
@@ -11,29 +12,11 @@ import { Spotlight } from "./components/ui/spotlight-new";
 import { getColors } from "@/app/lib/colors"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Loader from "./components/ui/box-loader";
-
-import { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 
 export default function Home() {
 
   const colorGroups = getColors();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <div className="flex min-h-screen w-full items-center justify-center rounded-lg border bg-background p-4">
-      <Loader/>
-    </div>;
-  }
 
   return (
     <>
