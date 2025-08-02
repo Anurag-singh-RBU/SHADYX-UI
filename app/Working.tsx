@@ -6,6 +6,7 @@ const Working = () => {
   return (
 
     <>
+    
         <div className='flex items-center justify-center text-center sm:mt-30 mt-25'>
             <h3 className='sm:font-bold font-extrabold font-JB sm:text-[48px] text-[30px] text-gray-700'>How Does it Work ?</h3>
         </div>

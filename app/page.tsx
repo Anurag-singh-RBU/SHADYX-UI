@@ -14,6 +14,7 @@ import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import Link from "next/link";
 
 import { useEffect } from "react";
+import { ChevronRight } from "lucide-react";
 
 export default function Home() {
 
@@ -31,7 +32,7 @@ export default function Home() {
           <div className="sm:mt-15 mt-15">
             <div
               id="spacing"
-              className="text-3xl sm:text-7xl text-nowrap font-JB font-extrabold mb-3 sm:mb-5 text-gray-800 whitespace-nowrap sm:whitespace-nowrap text-center px-4">
+              className="text-3xl sm:text-7xl text-shadow-lg text-nowrap font-JB font-extrabold mb-3 sm:mb-5 text-gray-800 whitespace-nowrap sm:whitespace-nowrap text-center px-4">
               Shortcut to Stunning
             </div>
 
@@ -41,7 +42,7 @@ export default function Home() {
               <Cover>
                 <div
                   id="spacing"
-                  className="text-3xl sm:text-7xl text-center font-extrabold sm:text-center sm:pb-4 sm:pt-2 font-JB px-4 sm:px-5">
+                  className="text-3xl sm:text-7xl text-shadow-md text-center font-extrabold sm:text-center sm:pb-4 sm:pt-2 font-JB px-4 sm:px-5">
                   from Copy to Vibe
                 </div>
               </Cover>
@@ -75,21 +76,7 @@ export default function Home() {
                   <span className="font-bold font-JB">
                     <span className="font-bold font-JB">Explore </span>Components
                   </span>
-                  <svg
-                    className="ml-1"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.75 8.75L14.25 12L10.75 15.25"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <ChevronRight width={16} height={16}/>
                 </span>
               </a>
             </Link>
@@ -102,16 +89,15 @@ export default function Home() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 16 16"
-                className="w-4 h-4 -ml-3 sm:ml-0 text-gray-700"
-              >
+                className="w-4 h-4 -ml-3 sm:ml-0 text-gray-700">
                 <path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.7.4.08.55-.18.55-.39 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.91-3.64-4.04 0-.89.31-1.61.82-2.18-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.47 7.47 0 0 1 2-.27 7.45 7.45 0 0 1 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.57.82 1.29.82 2.18 0 3.14-1.87 3.84-3.65 4.04.29.25.54.74.54 1.49 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0z" />
               </svg>
-              <span className="mt-[1px] sm:mt-0">Star on GitHub</span>
+              <span className="mt-[1px] text-shadow-xs sm:mt-0">Star on GitHub</span>
             </a> 
           </div>
         </main>
 
-        <div className="text-center text-sm text-gray-700 mono-text mt-5">
+        <div className="text-center text-sm text-gray-700 text-shadow-sm mono-text mt-5">
           Current release&nbsp;
           <span className="font-bold font-JB text-black">v1.0.3</span>
         </div>
@@ -136,12 +122,13 @@ export default function Home() {
         <ReadDocs/>
             <div className="h-auto md:hidden lg:flex flex sm:flex-row flex-col sm:justify-center sm:gap-25 justify-center items-center sm:mt-3 sm:mb-15 my-5 sm:px-23">
             <div>
-                <TerminalDemo/>
-              </div>
+              <TerminalDemo/>
+            </div>
 
               <section className="text-center sm:block sm:px-4 sm:py-20 pt-10 space-y-6 bg-white text-black font-JB">
                 <h1 className="text-2xl mb-2 md:text-5xl font-bold leading-tight">
-                  Frontend Development </h1><span className="text-2xl hidden sm:block md:text-5xl font-bold leading-tight">at Lightning Speed</span> 
+                  Frontend Development 
+                </h1><span className="text-2xl hidden sm:block md:text-5xl font-bold leading-tight">at Lightning Speed</span> 
                 
 
               <p className="text-xl mt-5 md:text-2xl flex flex-wrap items-center justify-center gap-2">

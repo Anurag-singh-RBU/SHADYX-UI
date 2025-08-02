@@ -77,9 +77,9 @@ const CliOutput: React.FC<CliOutputProps> = ({ commands }) => {
         onClick={handleCopy}
         className="ml-4 flex-shrink-0 text-gray-400 hover:text-gray-600 transition cursor-pointer">
         {copied ? (
-        <Check className="w-5 h-5 text-green-500" />
+        <Check className="w-5 h-5 text-green-500"/>
         ) : (
-        <Copy className="w-5 h-5" />
+        <Copy className="w-5 h-5"/>
         )}
     </button>
     </div>
