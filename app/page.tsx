@@ -10,15 +10,30 @@ import { Cover } from "./components/ui/cover";
 import { Spotlight } from "./components/ui/spotlight-new";
 import { getColors } from "@/app/lib/colors"
 import { Button } from "@/components/ui/button";
-import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import Link from "next/link";
+import Loader from "./components/ui/box-loader";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 
 export default function Home() {
 
   const colorGroups = getColors();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <div className="flex min-h-screen w-full items-center justify-center rounded-lg border bg-background p-4">
+      <Loader/>
+    </div>;
+  }
 
   return (
     <>
