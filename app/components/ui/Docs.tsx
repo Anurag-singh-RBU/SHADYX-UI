@@ -84,19 +84,35 @@ const Docs = () => {
         </div>
 
         {/* Step 2 */}
+
         <div>
           <div className="flex items-center space-x-2 mb-3 sm:mt-15 mt-15">
             <div className="border-1 border-gray-300 text-sm font-bold px-2 py-1 font-JB rounded">2</div>
+            <h2 className="text-lg ml-2 font-bold font-JB">Install Shadyx UI</h2>
+          </div>
+          <div className="bg-gray-100 px-4 py-3 flex justify-between items-center text-sm font-mono rounded-lg border text-card-foreground shadow-sm w-full">
+            <span>npm install @anuragcodes/shadyx</span>
+            <button
+              // This ID is correctly 'step2' for the initial Shadcn init command
+              onClick={() => handleCopy('npm i @anuragcodes/shadyx', 'step2')}
+              className="text-gray-600 hover:text-black">
+              {copied['step2'] ? TickIcon : ClipboardIcon}
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div className="flex items-center space-x-2 mb-3 sm:mt-15 mt-15">
+            <div className="border-1 border-gray-300 text-sm font-bold px-2 py-1 font-JB rounded">3</div>
             <h2 className="text-lg ml-2 font-bold font-JB">Install Shadcn UI</h2>
           </div>
           <div className="bg-gray-100 px-4 py-3 flex justify-between items-center text-sm font-mono rounded-lg border text-card-foreground shadow-sm w-full">
             <span>npx shadcn@latest init</span>
             <button
               // This ID is correctly 'step2' for the initial Shadcn init command
-              onClick={() => handleCopy('npx shadcn@latest init', 'step2')}
-              className="text-gray-600 hover:text-black"
-            >
-              {copied['step2'] ? TickIcon : ClipboardIcon}
+              onClick={() => handleCopy('npx shadcn@latest init', 'step3')}
+              className="text-gray-600 hover:text-black">
+              {copied['step3'] ? TickIcon : ClipboardIcon}
             </button>
           </div>
         </div>
@@ -110,8 +126,7 @@ const Docs = () => {
               <button
                 // Changed ID from 'step1' to 'shadcnInitDefault'
                 onClick={() => handleCopy('npx shadcn@latest init -d', 'shadcnInitDefault')}
-                className="text-gray-600 hover:text-black"
-              >
+                className="text-gray-600 hover:text-black">
                 {copied['shadcnInitDefault'] ? TickIcon : ClipboardIcon}
               </button>
             </div>
@@ -119,7 +134,7 @@ const Docs = () => {
 
           <div className="space-y-2">
             <div className="flex space-x-2 mb-2 sm:mt-18 mt-16">
-              <div className="border-1 border-gray-300 text-sm font-bold px-2 py-1 font-JB rounded">3</div>
+              <div className="border-1 border-gray-300 text-sm font-bold px-2 py-1 font-JB rounded">4</div>
               <h2 className="text-lg text-justify ml-2 font-bold font-JB">Configure Components.json</h2>
             </div>
             <p className="text-sm text-gray-500 mb-5 mt-3 font-JB sm:font-semibold font-bold">
@@ -135,14 +150,14 @@ const Docs = () => {
 
         <div className="mb-6 sm:mt-10 mt-10">
           <div className="flex items-center space-x-2 mb-2">
-            <div className="border-1 border-gray-300 text-sm font-bold px-2 py-1 font-JB rounded">4</div>
+            <div className="border-1 border-gray-300 text-sm font-bold px-2 py-1 font-JB rounded">5</div>
             <h2 className="text-lg ml-2 font-bold font-JB">Enjoy The Vibe</h2>
           </div>
           <p className="text-sm text-gray-500 mb-3 mt-3 font-JB sm:font-semibold font-bold">
             You can now start adding components to your project.
           </p>
         </div>
-        <Accordian />
+        <Accordian/>
       </div>
     </>
   )
