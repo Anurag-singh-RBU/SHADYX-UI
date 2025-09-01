@@ -76,8 +76,7 @@ const Docs = () => {
             <button
               // Changed ID from 'step1' to 'createReactApp'
               onClick={() => handleCopy('npx create-react-app@latest', 'createReactApp')}
-              className="text-gray-600 hover:text-black"
-            >
+              className="text-gray-600 hover:text-black">
               {copied['createReactApp'] ? TickIcon : ClipboardIcon}
             </button>
           </div>
