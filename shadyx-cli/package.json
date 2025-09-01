@@ -1,9 +1,9 @@
 {
   "name": "@anuragcodes/shadyx",
-  "version": "1.0.5",
-  "private": false,
+  "version": "1.0.7",
   "description": "CLI to install Shadyx UI components via JSON",
   "type": "module",
+  "main": "bin/index.js",
   "bin": {
     "shadyx": "./bin/index.js"
   },
@@ -18,9 +18,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Anurag-singh-RBU/SHADYX-UI.git"
+    "url": "git+https://github.com/Anurag-singh-RBU/SHADYX-UI.git"
   },
   "dependencies": {
     "node-fetch": "^3.3.2"
-  }
+  },
+  "files": [
+    "bin/",
+    "README.md",
+    "package.json"
+  ]
 }
