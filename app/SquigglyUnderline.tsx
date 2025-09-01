@@ -85,8 +85,7 @@ export const SquigglyUnderline = () => {
             onClick={() => setSelectedLink("Home")}
             className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
               selectedLink === "Home" ? "text-black" : "text-gray-500"
-            }`}
-          >
+            }`}>
             Home
             {selectedLink === "Home" && (
               <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
@@ -97,8 +96,7 @@ export const SquigglyUnderline = () => {
                   fill="none"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.1 }}
-                >
+                  transition={{ duration: 0.1 }}>
                   <motion.path
                     d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
                     stroke="#3B82F6"
@@ -120,8 +118,7 @@ export const SquigglyUnderline = () => {
             onClick={() => setSelectedLink("Docs")}
             className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
               selectedLink === "Docs" ? "text-black" : "text-gray-500"
-            }`}
-          >
+            }`}>
             Docs
             {selectedLink === "Docs" && (
               <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
