@@ -1,3 +1,8 @@
+<h1 align="center">SHADYX UI</h1>
+
+![Shadyx UI](./public/shadyxui.jpg)
+<hr></hr>
+
 ## Contributing to Shadyx UI
 
 Thank you for your interest in contributing to Shadyx UI ! 🎉  
