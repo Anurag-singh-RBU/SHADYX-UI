@@ -104,7 +104,7 @@ const Artifacts = () => {
         </div>
         <h1 className="text-center text-xl mt-6 font-bold">Accordian</h1>
         <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium sm:mb-0 -mb-18">
-          Sleek Showcasing of Reviews
+          Frequently Asked Questions
         </h4>
       </Link>
 

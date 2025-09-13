@@ -11,7 +11,7 @@ export default async function installComponent(jsonUrl) {
   try {
     const res = await fetch(jsonUrl);
     if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
+      throw new Error(`HTTP error ! Status : ${res.status}`);
     }
 
     const data = await res.json();
@@ -23,14 +23,14 @@ export default async function installComponent(jsonUrl) {
         
       }
 
-      const filePath = path.join(process.cwd(), file.path);
+      const filePath = path.join(process.cwd(), "shadyx", "ui", file.path);
       await mkdir(path.dirname(filePath), { recursive: true });
       await writeFile(filePath, file.content, "utf8");
-      console.log(`✅ Created ${file.path}`);
+      console.log(`✅ Created shadyx/ui/${file.path}`);
     }
 
-    console.log(`🎉 ${data.name} component installed successfully !`);
+    console.log(`🎉 ${data.name} component installed successfully !!`);
   } catch (err) {
-    console.error("❌ Failed installation :", err.message);
+    console.error("❌ Failed installation : ", err.message);
   }
 }

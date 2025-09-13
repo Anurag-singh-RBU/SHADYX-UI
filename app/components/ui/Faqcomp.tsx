@@ -93,11 +93,11 @@ return (
       <h1 className="text-4xl font-bold text-gray-900 mb-3 mono-text">Accordian</h1>
 
       <p className="sm:text-md text-sm text-gray-600 mb-4 mono-text text-justify">
-        Where have you gone ? We&apos;ve been searching for you — come back soon.
+        Expand to discover hidden content — click to reveal more !!
       </p>
 
       <div className="flex flex-wrap sm:gap-2 gap-3 -ml-2 mb-6 font-JB">
-        {['Accordian', 'Questions'].map((tag, index) => (
+        {['Accordian', 'Questions' , 'Sleek'].map((tag, index) => (
           <div key={tag} className={`relative sm:ml-0 ml-1 rounded-full p-[2px] tag-wrapper tag-${index}`}>
             <div className="relative z-10 bg-black text-white text-sm sm:px-4 px-2 py-1 rounded-full font-medium">
               {tag}
@@ -158,9 +158,9 @@ return (
             <CliOutput
               commands={{
                 npm: 'npx @anuragcodes/shadyx add https://shadyxui.in/r/accordian.json',
-                pnpm: 'pnpm dlx @anuragcodes/shadyx add https://shadyxui.in/r/not-found.json',
-                yarn: 'yarn dlx @anuragcodes/shadyx add https://shadyxui.in/r/not-found.json',
-                bun: 'bunx @anuragcodes/shadyx add https://shadyxui.in/r/not-found.json',
+                pnpm: 'pnpm dlx @anuragcodes/shadyx add https://shadyxui.in/r/accordian.json',
+                yarn: 'yarn dlx @anuragcodes/shadyx add https://shadyxui.in/r/accordian.json',
+                bun: 'bunx @anuragcodes/shadyx add https://shadyxui.in/r/accordian.json',
               }}/>
           </div>
         )}
