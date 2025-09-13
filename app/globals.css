@@ -344,13 +344,14 @@ body {
 #paraSix,
 #paraSeven,
 #paraEight,
-#paraNine {
+#paraNine,
+#paraTen {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   height: 300px;
   width: 400px;
-  background-color: rgb(6, 10, 21); /* Use black for #paraTwo if needed */
+  background-color: rgb(6, 10, 21);
 }
 
 #paraTwo {
@@ -398,6 +399,11 @@ body {
   background-image: url("review.png");
 }
 
+#paraTen {
+  background-color: white;
+  background-image: url("accordian.jpg");
+}
+
 @media (max-width: 640px) {
   #para,
   #paraTwo,
@@ -407,11 +413,12 @@ body {
   #paraSix,
   #paraSeven,
   #paraEight,
-  #paraNine {
+  #paraNine,
+  #paraTen {
     width: 100%;
     max-width: 350px;
     height: 200px;
-    margin-inline: auto; /* centers horizontally */
+    margin-inline: auto;
   }
 }
 
