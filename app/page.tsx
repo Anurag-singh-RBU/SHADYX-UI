@@ -66,17 +66,15 @@ export default function Home() {
 
           <div className="flex flex-row items-center justify-center sm:mt-8 mt-5 gap-4 sm:gap-8 flex-wrap">
 
-            <Link href="/component" passHref legacyBehavior>
-              <a className="relative group inline-flex w-full sm:w-auto items-center justify-center rounded-md bg-black px-5 py-2 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition-all duration-300">
-                <span className="absolute inset-0 rounded-md bg-[radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.3)_0%,rgba(56,189,248,0)_75%)] opacity-0"></span>
-                <span className="relative z-10 flex items-center space-x-2 cursor-pointer">
-                  <span className="text-sm">✨</span>
-                  <span className="font-bold font-JB">
-                    <span className="font-bold font-JB">Explore </span>Components
-                  </span>
-                  <ChevronRight width={16} height={16}/>
+            <Link href="/component" className="relative group inline-flex w-full sm:w-auto items-center justify-center rounded-md bg-black px-5 py-2 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition-all duration-300">
+              <span className="absolute inset-0 rounded-md bg-[radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.3)_0%,rgba(56,189,248,0)_75%)] opacity-0"></span>
+              <span className="relative z-10 flex items-center space-x-2 cursor-pointer">
+                <span className="text-sm">✨</span>
+                <span className="font-bold font-JB">
+                  <span className="font-bold font-JB">Explore </span>Components
                 </span>
-              </a>
+                <ChevronRight width={16} height={16}/>
+              </span>
             </Link>
             <a
               href="https://github.com/Anurag-singh-RBU/SHADYX-UI"
@@ -129,7 +127,7 @@ export default function Home() {
                 </h1><span className="text-2xl hidden sm:block md:text-5xl font-bold leading-tight">at Lightning Speed</span> 
                 
 
-              <p className="text-xl mt-5 md:text-2xl flex flex-wrap items-center justify-center gap-2">
+              <div className="text-xl mt-5 md:text-2xl flex flex-wrap items-center justify-center gap-2">
                 <Cover>
                 <div
                   id="spacing"
@@ -149,7 +147,7 @@ export default function Home() {
                   Flash
                 </div>
               </Cover>
-              </p>
+              </div>
 
               <div className="flex flex-wrap items-center justify-center gap-4 sm:pt-4 pt-2">
                 <Button className="bg-black text-white cursor-pointer px-6 py-3 rounded-full font-bold text-sm hover:bg-gray-900">
