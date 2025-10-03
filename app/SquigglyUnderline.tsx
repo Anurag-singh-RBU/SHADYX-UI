@@ -17,7 +17,8 @@ const navItems: NavItem[] = [
   { name: "Docs" },
   { name: "Components" },
   { name: "About" },
-  { name: "Colors" }, // This array is correct
+  { name: "Colors" },
+  { name: "Editor" },
 ];
 
 export const SquigglyUnderline = () => {
@@ -36,6 +37,8 @@ export const SquigglyUnderline = () => {
       setSelectedLink("About");
     } else if (pathname.startsWith("/colors")) {
       setSelectedLink("Colors");
+    } else if (pathname.startsWith("/editor")) {
+      setSelectedLink("Editor");
     }
   }, [pathname]);
 
@@ -238,6 +241,42 @@ export const SquigglyUnderline = () => {
               </motion.div>
             )}
           </Link>
+
+          <Link
+            href="/"
+            onClick={() => setSelectedLink("Editor")}
+            className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
+              selectedLink === "Editor" ? "text-black" : "text-gray-500"
+            }`}>
+            Lab
+            {selectedLink === "Editor" && (
+              <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
+                <motion.svg
+                  width="37"
+                  height="8"
+                  viewBox="0 0 37 8"
+                  fill="none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1 }}>
+                  <motion.path
+                    d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
+                    stroke="#3B82F6"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    initial={{ strokeDasharray: 84.2, strokeDashoffset: 84.2 }}
+                    animate={{ strokeDashoffset: 0 }}
+                    transition={{ duration: 1 }}
+                  />
+                </motion.svg>
+              </motion.div>
+            )}
+          </Link>
+          <div className="text-xs -ml-5 px-1.5 py-0.5 rounded-full bg-yellow-400/30 dark:bg-[#eaec8a]/16 text-yellow-600 dark:text-[#eaec8a] [text-shadow:0_1px_1.5px_rgb(0,0,0,0.16)]">
+          Coming Soon
+          </div>
+
         </nav>
 
         {/* Right: CTA & Socials (Desktop only) */}
@@ -297,7 +336,7 @@ export const SquigglyUnderline = () => {
         if (item.name === "Docs") itemHref = "/docs";
         if (item.name === "Components") itemHref = "/component";
         if (item.name === "About") itemHref = "/about";
-        if (item.name === "Colors") itemHref = "/colors"; // Corrected this line
+        if (item.name === "Colors") itemHref = "/colors";
 
         return (
           <Link
