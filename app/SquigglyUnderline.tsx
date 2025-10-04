@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
   { name: "Components" },
   { name: "About" },
   { name: "Colors" },
-  { name: "Editor" },
+  { name: "Lab" },
 ];
 
 export const SquigglyUnderline = () => {
@@ -38,7 +38,7 @@ export const SquigglyUnderline = () => {
     } else if (pathname.startsWith("/colors")) {
       setSelectedLink("Colors");
     } else if (pathname.startsWith("/editor")) {
-      setSelectedLink("Editor");
+      setSelectedLink("Lab");
     }
   }, [pathname]);
 
@@ -244,12 +244,12 @@ export const SquigglyUnderline = () => {
 
           <Link
             href="/"
-            onClick={() => setSelectedLink("Editor")}
+            onClick={() => setSelectedLink("Lab")}
             className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
-              selectedLink === "Editor" ? "text-black" : "text-gray-500"
+              selectedLink === "Lab" ? "text-black" : "text-gray-500"
             }`}>
             Lab
-            {selectedLink === "Editor" && (
+            {selectedLink === "Lab" && (
               <motion.div className="absolute left-1/2 transform -translate-x-1/2 top-full lg:mt-1">
                 <motion.svg
                   width="37"
