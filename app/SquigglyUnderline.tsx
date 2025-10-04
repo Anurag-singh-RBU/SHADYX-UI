@@ -337,6 +337,7 @@ export const SquigglyUnderline = () => {
         if (item.name === "Components") itemHref = "/component";
         if (item.name === "About") itemHref = "/about";
         if (item.name === "Colors") itemHref = "/colors";
+        if (item.name === "Lab") itemHref = "/";
 
         return (
           <Link
