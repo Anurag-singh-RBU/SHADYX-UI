@@ -243,7 +243,7 @@ export const SquigglyUnderline = () => {
           </Link>
 
           <Link
-            href="/"
+            href="https://shadyxlab.vercel.app"
             onClick={() => setSelectedLink("Lab")}
             className={`relative flex items-center hover:text-gray-700 gap-1 cursor-pointer text-sm transition-colors duration-200 ${
               selectedLink === "Lab" ? "text-black" : "text-gray-500"
@@ -273,8 +273,8 @@ export const SquigglyUnderline = () => {
               </motion.div>
             )}
           </Link>
-          <div className="text-xs -ml-5 px-1.5 py-0.5 rounded-full bg-yellow-400/30 dark:bg-[#eaec8a]/16 text-yellow-600 dark:text-[#eaec8a] [text-shadow:0_1px_1.5px_rgb(0,0,0,0.16)]">
-          Coming Soon
+          <div className="text-xs -ml-6 px-1.5 py-0.5 rounded-full bg-yellow-400/30 dark:bg-[#eaec8a]/16 text-yellow-600 dark:text-[#eaec8a]">
+            New
           </div>
 
         </nav>
@@ -337,7 +337,7 @@ export const SquigglyUnderline = () => {
         if (item.name === "Components") itemHref = "/component";
         if (item.name === "About") itemHref = "/about";
         if (item.name === "Colors") itemHref = "/colors";
-        if (item.name === "Lab") itemHref = "/";
+        if (item.name === "Lab") itemHref = "https://shadyxlab.vercel.app";
 
         return (
           <Link
