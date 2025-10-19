@@ -34,7 +34,7 @@ export default function Swipe() {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden sm:whitespace-none whitespace-nowrap">
 
-      <div className="relative flex items-center justify-center sm:my-80 my-60">
+      <div className="relative flex items-center justify-center my-80">
         <AnimatePresence>
           {cards.map((card, index) => (
             <motion.div
