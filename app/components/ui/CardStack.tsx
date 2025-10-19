@@ -249,10 +249,10 @@ return (
           <div className="h-auto overflow-x-auto overflow-hidden">
             <CliOutput
               commands={{
-                npm: 'npx @anuragcodes/shadyx add https://shadyxui.in/r/accordian.json',
-                pnpm: 'pnpm dlx @anuragcodes/shadyx add https://shadyxui.in/r/accordian.json',
-                yarn: 'yarn dlx @anuragcodes/shadyx add https://shadyxui.in/r/accordian.json',
-                bun: 'bunx @anuragcodes/shadyx add https://shadyxui.in/r/accordian.json',
+                npm: 'npx @anuragcodes/shadyx add https://shadyxui.in/r/cardstack.json',
+                pnpm: 'pnpm dlx @anuragcodes/shadyx add https://shadyxui.in/r/cardstack.json',
+                yarn: 'yarn dlx @anuragcodes/shadyx add https://shadyxui.in/r/cardstack.json',
+                bun: 'bunx @anuragcodes/shadyx add https://shadyxui.in/r/cardstack.json',
               }}/>
           </div>
         )}
