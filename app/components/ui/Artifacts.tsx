@@ -108,6 +108,16 @@ const Artifacts = () => {
         </h4>
       </Link>
 
+      <Link href="/draggablecards" className="flex sm:mt-0 mt-18 flex-col cursor-pointer">
+        <div className="bg-white border-1 border-gray-200 rounded-2xl overflow-hidden py-3">
+          <div id="paraEleven"/>
+        </div>
+        <h1 className="text-center text-xl mt-6 font-bold">Cards Stack</h1>
+        <h4 className="text-center mono-text text-sm mt-1 font-bold sm:font-medium sm:mb-0 -mb-18">
+          Draggable and Swipeable Cards
+        </h4>
+      </Link>
+
     </div>
   );
 };

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+MX+Guides&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -7,6 +8,13 @@
 
   font-family: 'JetBrains Mono', monospace;
 
+}
+
+.font-inter {
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  
 }
 
 @media (max-width: 640px) {
@@ -345,7 +353,8 @@ body {
 #paraSeven,
 #paraEight,
 #paraNine,
-#paraTen {
+#paraTen,
+#paraEleven {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -404,6 +413,11 @@ body {
   background-image: url("accordian.jpg");
 }
 
+#paraEleven {
+  background-color: white;
+  background-image: url("cards.jpg");
+}
+
 @media (max-width: 640px) {
   #para,
   #paraTwo,
@@ -414,7 +428,8 @@ body {
   #paraSeven,
   #paraEight,
   #paraNine,
-  #paraTen {
+  #paraTen,
+  #paraEleven {
     width: 100%;
     max-width: 350px;
     height: 200px;
