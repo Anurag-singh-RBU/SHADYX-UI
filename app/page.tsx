@@ -13,6 +13,8 @@ import { getColors } from "@/app/lib/colors"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { DotPattern } from "@/components/ui/dot-pattern"
+import { cn } from "@/lib/utils"
 
 export default function Home() {
 
@@ -95,7 +97,7 @@ export default function Home() {
 
         <div className="text-center text-sm text-gray-700 text-shadow-sm mono-text mt-5">
           Current release&nbsp;
-          <span className="font-bold font-JB text-black">v1.0.5</span>
+          <span className="font-bold font-JB text-black">v1.0.6</span>
         </div>
         <div className="flex flex-col items-center justify-center sm:mt-20 mt-15 sm:-mb-2 -mb-8 space-y-6">
           <span className="font-JB font-bold text-xl">Featured On</span>        
