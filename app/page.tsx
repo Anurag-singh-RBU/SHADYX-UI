@@ -13,8 +13,6 @@ import { getColors } from "@/app/lib/colors"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { DotPattern } from "@/components/ui/dot-pattern"
-import { cn } from "@/lib/utils"
 
 export default function Home() {
 
