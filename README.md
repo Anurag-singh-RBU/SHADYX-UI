@@ -5,7 +5,7 @@
 
 ## Contributing to Shadyx UI
 
-Thank you for your interest in contributing to Shadyx UI ! 🎉  
+Thank you for your interest in contributing to Shadyx UI !! 🎉  
 We value contributions from the community , whether it's a bug fix , a new feature , or an enhancement. Your input helps us grow and improve the library.
 
 ---
