@@ -1,5 +1,5 @@
-module.exports = {
+export default {
   siteUrl: 'https://shadyxui.in',
-  generateRobotsTxt: true,        
-  generateIndexSitemap: true, 
+  generateRobotsTxt: true,
+  generateIndexSitemap: true,
 }
