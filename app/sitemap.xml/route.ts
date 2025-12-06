@@ -10,11 +10,23 @@ export async function GET(request: NextRequest) {
 
   // ✅ Manually add all static routes you want in sitemap
   const pages = [
-    "/", 
-    "/component", 
-    "/colors", 
-    "/docs", 
-    "/about"
+    "/",
+    "/about",
+    "/colors",
+    "/component",
+    "/docs",
+    "/draggablecards",
+    "/errorcomponent",
+    "/faqcomponent",
+    "/illuminationeffect",
+    "/navbarcomponent",
+    "/not-found",
+    "/paintcomponent",
+    "/parallaxcomponent",
+    "/planetcomponent",
+    "/pricingcomponent",
+    "/reviewcomponent",
+    "/svgcomponent"
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
